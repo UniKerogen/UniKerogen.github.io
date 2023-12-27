@@ -26,7 +26,7 @@ function scrollToTop() {
 function updateCopyrightYear() {
     var currentYear = new Date().getFullYear();
     var copyrightElement = document.getElementById("copyright");
-    copyrightElement.textContent = "© 2019-" + currentYear + " by Kuang Jiang";
+    copyrightElement.textContent = "Copyright © 2019-" + currentYear + " Kuang Jiang. All rights reserved.";
 }
 
 updateCopyrightYear();
