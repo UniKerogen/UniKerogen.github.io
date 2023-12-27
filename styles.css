@@ -10,13 +10,13 @@ body {
     align-items: center;
     justify-content: center;
     background-color: #141414;
-    color: white;
+    color: #cccccc;
     font-family: Arial, sans-serif;
     padding-left: auto;
     padding-right: auto;
     min-height: 100vh;
     margin: 0;
-    min-width: 500px;
+    min-width: 550px;
 }
 
 /* Header */
@@ -32,12 +32,13 @@ header {
     background-color: #141414;
     border-bottom: 1px solid #333;
     width: 100%;
+    min-width: 500px;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    color: white;
+    color: #cccccc;
     font-size: 24px;
     font-weight: bold;
     padding-left: 30px
@@ -52,9 +53,62 @@ header {
 
 .navigation a {
     margin-left: 16px;
-    color: white;
+    color: #cccccc;
     text-decoration: none;
     font-size: 18px;
+}
+
+/* Dropdown styles */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    color: #cccccc;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    transition: opacity 5s ease;
+    padding-top: 8px;
+}
+
+.dropdown-content {
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding: 5px;
+    padding-right: 8px;
+    background-color: rgba(20, 20, 20, 0.8);
+}
+
+.dropdown-item {
+    min-width: 100%;
+    color: #cccccc;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    padding-left: 2px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    white-space: nowrap;
+    transition: color 0.3s background-color 0.1s;
+    border-radius: 5px;
+}
+
+.dropdown-item:hover {
+    background-color: #333;
+    color: #ffffff;
+}
+
+/* Show the dropdown content on hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
 }
 
 /* footer */
@@ -74,7 +128,7 @@ footer {
 legal_note {
     display: flex;
     align-items: center;
-    color: white;
+    color: #cccccc;
     font-size: 10px;
     font-weight: bold;
     padding-left: 30px;
@@ -87,7 +141,7 @@ legal_note {
     display: inline-block;
     padding: 2px 10px;
     background-color: #292828;
-    color: #ffffff;
+    color: #dddddd;
     border-radius: 20px;
     font-size: 12px;
 }
@@ -96,6 +150,7 @@ legal_note {
     display: inline-block;
     padding: 0px 8px;
     background-color: #141414;
+    color: #dddddd;
     border: 2px solid #292828;
     border-radius: 10px;
     font-size: 12px;
@@ -105,7 +160,7 @@ legal_note {
     display: inline-block;
     padding: 1px 8px;
     background-color: #0E3386;
-    color: #ffffff;
+    color: #dddddd;
     font-size: 12px;
     position: relative;
     border-radius: 5px;
@@ -168,6 +223,7 @@ legal_note {
     position: relative; /* Adjust positioning of the text */
     z-index: 1; /* Ensure the text is above the image */
     font-size: 16px;
+    color: #eeeeee;
 }
 
 .more_detail-image {
@@ -195,26 +251,26 @@ section {
 }
 
 h1 {
-    color: #fff;
+    color: #dddddd;
     font-size: 32px;
     margin-bottom: 30px;
 }
 
 h2 {
-    color: #fff;
+    color: #dddddd;
     font-size: 24px;
     margin-bottom: 20px;
 }
 
 h5 {
-    color: #ccc;
+    color: #dddddd;
     font-size: 12px;
     margin-bottom: 20px;
     text-align: center;
 }
 
 p {
-    color: #ccc;
+    color: #bbbbbb;
     font-size: 18px;
     line-height: 1.6;
     padding: auto auto;
@@ -239,7 +295,7 @@ p {
 }
 
 .project-description a {
-    color: white;
+    color: #cccccc;
     text-decoration: none;
 }
 
