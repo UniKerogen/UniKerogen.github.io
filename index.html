@@ -28,6 +28,7 @@
                         <div class="dropdown-item">&#x2022; Dino Runner</div>
                         <div class="dropdown-item">&#x2022; ShroomBot</div>
                         <div class="dropdown-item">&#x2022; Space Shooter</div>
+                        <div class="dropdown-item">&#x2022; Kuang's Place</div>
                     </div>
                 </div>
             </div>
@@ -68,29 +69,27 @@
 
         <!-- Project 1 -->
 
-        <div class="project" style="padding: 8px;">
-            <div class="project" style="padding: 8px; display: flex;">
-                <div class="project-description" style="flex: 2;">
-                    <h2 style="padding-left: 48px; margin-bottom: -15px" href="#">GPT Desktop</h2>
-                    <p style="padding-left: 48px;">
-                        <span class="tag">App</span>&nbsp;
-                        <span class="box">Public</span>
-                        <span class="pill">Swift</span></p>
-                    <p style="padding-left: 48px;">
-                        A macOS application that seamlessly integrates a curated collection of GPTs onto the desktop, enhanced with carefully selected features.
-                    </p>
-                    <p style="padding-left: 48px;">
-                        <span class="more_detail-container">
-                            <span class="more_detail-item-container">
-                                <img src="resources/buttons/more_details_button.png" alt="More Detail Icon" class="more_detail-image" style="width: 20px; height: 20px">
-                                <a href="#" class="more_detail">Read More</a>
-                            </span>
+        <div class="project" style="padding: 8px; display: flex;" id="project1">
+            <div class="project-description" style="flex: 2;">
+                <h2 style="padding-left: 48px; margin-bottom: -15px" href="#">GPT Desktop</h2>
+                <p style="padding-left: 48px;">
+                    <span class="tag">App</span>&nbsp;
+                    <span class="box">Public</span>
+                    <span class="pill">Swift</span></p>
+                <p style="padding-left: 48px;">
+                    A macOS application that seamlessly integrates a curated collection of GPTs onto the desktop, enhanced with carefully selected features.
+                </p>
+                <p style="padding-left: 48px;">
+                    <span class="more_detail-container">
+                        <span class="more_detail-item-container">
+                            <img src="resources/buttons/more_details_button.png" alt="More Detail Icon" class="more_detail-image" style="width: 20px; height: 20px">
+                            <a href="#" class="more_detail">Read More</a>
                         </span>
-                    </p>
-                </div>
-                <div style="flex: 1; display: flex; align-items: center;">
-                    <img src="resources/gpt_desktop.png" alt="Project 1" style="width: 200px; height: 200px; align-self: flex-end;">
-                </div>
+                    </span>
+                </p>
+            </div>
+            <div style="flex: 1; display: flex; align-items: center;">
+                <img src="resources/gpt_desktop.png" alt="Project 1" style="width: 200px; height: 200px; align-self: flex-end;">
             </div>
         </div>
 
@@ -98,7 +97,7 @@
 
         <!-- Project 2 -->
 
-        <div class="project" style="padding: 8px; display: flex;">
+        <div class="project" style="padding: 8px; display: flex;" id="project2">
             <div style="flex: 1; display: flex; align-items: center;">
                 <img src="resources/dino_runner.png" alt="Project 2" style="padding-left: 48px;">
             </div>
@@ -109,6 +108,8 @@
                     <span class="box">Private</span>
                     <span class="pill">Python</span>
                     <span class="pill">JavaScript</span>
+                    <span class="leaf">PyTorch</span>
+                    <span class="leaf">Tensorflow</span>
                 </p>
                 <p style="padding-right: 48px;">
                     Embarked on a machine learning endeavor, this project meticulously captures gameplay data from Google's Dino Game and employs advanced training techniques to cultivate a bespoke agent proficient in mastering the game.
@@ -128,7 +129,7 @@
 
         <!-- Project 3 -->
 
-        <div class="project" style="padding: 8px;">
+        <div class="project" style="padding: 8px; display: flex" id="project3">
             <div class="project-description" style="flex: 2;">
                 <h2 style="padding-left: 48px; margin-bottom: -15px;">ShroomBot</h2>
                 <p style="padding-left: 48px;">
@@ -136,6 +137,9 @@
                     <span class="box">Public</span>
                     <span class="pill">Python</span>
                     <span class="pill">C/C++</span>
+                    <span class="leaf">AutoCad</span>
+                    <span class="leaf">Solidworks</span>
+                    <span class="leaf">Tensorflow</span>
                 </p>
                 <p style="padding-left: 48px;">
                     An innovative machine learning endeavor featuring a series of custom-built robots designed for 24/7 mushroom picking, driven by network, powered by reinforcement learning algorithms.
@@ -158,7 +162,7 @@
 
         <!-- Project 4 -->
 
-        <div class="project" style="padding: 8px; display: flex;">
+        <div class="project" style="padding: 8px; display: flex;" id="project4">
             <div style="flex: 1; display: flex; align-items: center;">
                 <img src="resources/space_shooter.png" alt="Project 4" style="padding-left: 48px;">
             </div>
@@ -187,7 +191,7 @@
 
         <!-- Project 5 -->
 
-        <div class="project" style="padding: 8px;">
+        <div class="project" style="padding: 8px; display: flex" id="project5">
             <div class="project-description" style="flex: 2;">
                 <h2 style="padding-left: 48px; margin-bottom: -15px;">Kuang's Place</h2>
                 <p style="padding-left: 48px;">
@@ -197,7 +201,7 @@
                     <span class="pill">CSS</span>
                     <span class="pill">JavaScript</span>
                 </p>
-                <p style="padding-left: 48px;">
+                <p style="padding-left: 48px;" id="project5ShortDescription">
                     A webpage showcases my diverse range of skills and projects, combining creativity and technical expertise to deliver visually appealing and functional solutions.
                 </p>
                 <p style="padding-left: 48px;">
@@ -211,6 +215,48 @@
             </div>
             <div style="flex: 1; display: flex; align-items: center;">
                 <img src="resources/logo.png" alt="Project 5" style="padding-right: 48px; align-self: right;">
+            </div>
+        </div>
+
+    </section>
+
+    <section>
+        <div class="project" style="padding: 8px; display: flex" id="personalShowcase">
+            <div style="flex: 1; display: flex; align-items: center;">
+                <img src="resources/personal_showcase.png" alt="personalShowcase" style="padding-left: 48px;">
+            </div>
+            <div class="project-description" style="flex: 2; flex-direction: column;">
+                <p>
+                    I am looking forward to meeting you!<br>
+                    Please feel free to contact me!
+                </p>
+                <p style="font-size: 14px; margin-bottom: 0px;">Programming Skills:</p>
+                <p style="margin: 0px;">
+                    <span class="pill">Python</span>
+                    <span class="pill">C/C++</span>
+                    <span class="pill">Java</span>
+                    <span class="pill">JavaScript</span>
+                    <span class="pill">HTML</span>
+                    <span class="pill">CSS</span>
+                    <span class="pill">Swift</span>
+                    <span class="pill">Assembly</span>
+                    <span class="pill">MATLAB/Simulink</span>
+                    <span class="pill">Docker</span>
+                </p>
+                <p style="font-size: 14px; margin-bottom: 0px;">AI/Robotics Skills:</p>
+                <p style="margin: 0px;">
+                    <span class="leaf">AutoCad</span>
+                    <span class="leaf">Solidworks</span>
+                    <span class="leaf">SLAM</span>
+                    <span class="leaf">CUDA</span>
+                    <span class="leaf">Tensorflow</span>
+                    <span class="leaf">PyTorch</span>
+                    <span class="leaf">Robot Operating System(ROS)</span>
+                </p>
+                <p style="padding-right: 4">
+                    <a href="project.html" class="button" style="margin: 5px">More Projects</a>
+                    <a href="about.html" class="button" style="margin: 5px">More About Me</a>
+                </p>
             </div>
         </div>
 

@@ -26,11 +26,11 @@ function scrollToTop() {
 function updateCopyrightYear() {
     var currentYear = new Date().getFullYear();
     var copyrightElement = document.getElementById("copyright");
-    copyrightElement.textContent = "Copyright © 2019-" + currentYear + " Kuang Jiang. All rights reserved.";
+    copyrightElement.textContent = "Copyright © 2015-" + currentYear + " Kuang Jiang. All rights reserved.";
 }
 
 updateCopyrightYear();
 
-// Set up an interval to update the year every minute (adjust as needed)
+// Set up an interval to update the year every minute
 setInterval(updateCopyrightYear, 60000); // 60000 milliseconds = 1 minute
 
