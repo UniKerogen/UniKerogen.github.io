@@ -1,0 +1,77 @@
+/* project_styles.css */
+/* Author:  Kuang Jiang*/
+/* Description:  This file contains the styles for the project page. */
+
+.project-row {
+    display: flex;
+    justify-content: space-between;
+    min-width: inherit;
+    width: 90%;
+    margin: 5%;
+    padding-left: 1%;
+}
+
+.project-container {
+    width: 32%;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    perspective: 1000px;
+    cursor: auto;
+    border: 1px solid #333;
+    border-radius: 10px;
+}
+
+.project-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    transition: background 0.3s;
+    pointer-events: none;
+    border: 1px solid #333;
+    border-radius: 10px;
+}
+
+.project-container:hover::after {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.project-content,
+.project-content-back {
+    position: absolute;
+    transform: center;
+    width: 90%;
+    opacity: 1;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.project-content {
+    bottom: 0;
+    left: 1%;
+    text-align: left;
+    padding: 10px; /* Add padding for better visibility */
+}
+
+.project-container:hover .project-content {
+    transform: rotateY(180deg);
+    opacity: 0; /* Hide front content after the flip */
+}
+
+.project-content-back {
+    transform: rotateY(180deg);
+    top: 0;
+    left: 5%;
+    opacity: 0;
+    pointer-events: none; /* Disable hover on back content before flip */
+}
+
+.project-container:hover .project-content-back {
+    transform: rotateY(0deg);
+    opacity: 1; /* Show back content after the flip */
+    pointer-events: auto; /* Enable hover on back content after flip */
+}

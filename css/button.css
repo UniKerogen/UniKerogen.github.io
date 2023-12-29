@@ -1,0 +1,80 @@
+
+/* button.css */
+/* Author:  Kuang Jiang */
+/* Description: This file contains the styles for buttons. */
+
+/* Button */
+
+.pill-button {
+    display: inline-block;
+    padding: 5px 15px;
+    background-color: #002244;
+    color: #eeeeee;
+    border-radius: 20px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    text-decoration: none;
+
+    &:hover {
+        background-color: #004687;
+        color: #ffffff
+    }
+}
+
+.pill-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* More Detail Button */
+
+.more_detail-container {
+    position: relative;
+    display: inline-block;
+    padding: 5px;
+}
+
+.more_detail-item-container {
+    position: relative;
+    display: inline-block;
+    background-color: #0076CE;
+    border-radius: 20px;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 0px;
+    padding-bottom: 1px;
+    transition: color 0.3s;
+}
+
+.more_detail-item-container:hover {
+    background-color: #318CE7;
+}
+
+.more_detail {
+    text-decoration: underline;
+    color: inherit;
+    border: 1px solid transparent; /* Initially, transparent border */
+    border-radius: 20px;
+    transition: border 0.3s;
+    padding-left: 30px; /* Adjust padding to accommodate the image */
+    padding-right: 8px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    position: relative; /* Adjust positioning of the text */
+    z-index: 1; /* Ensure the text is above the image */
+    font-size: 16px;
+    color: #eeeeee;
+}
+
+.more_detail-image {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 20px;
+    height: auto;
+    padding-left: 10px;
+    z-index: 0; /* Ensure the image is behind the text */
+}

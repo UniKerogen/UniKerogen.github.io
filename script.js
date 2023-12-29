@@ -33,4 +33,3 @@ updateCopyrightYear();
 
 // Set up an interval to update the year every minute
 setInterval(updateCopyrightYear, 60000); // 60000 milliseconds = 1 minute
-
