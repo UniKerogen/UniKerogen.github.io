@@ -12,33 +12,52 @@
 }
 
 .project-container {
+    position: relative;
     width: 32%;
     height: 250px;
-    background-size: cover;
-    background-position: center;
-    position: relative;
+    overflow: hidden;
     perspective: 1000px;
     cursor: auto;
     border: 1px solid #333;
     border-radius: 10px;
-}
+    background-size: cover;
+    background-position: center;
 
-.project-container::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: transparent;
-    transition: background 0.3s;
-    pointer-events: none;
-    border: 1px solid #333;
-    border-radius: 10px;
-}
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1; /* Place it behind the content */
+        transition: filter 0.3s;
+        filter: blur(1px); /* Slightly blurry effect */
+        pointer-events: none;
+        background: rgba(20, 20, 20, 0.5);
+    }
 
-.project-container:hover::after {
-    background: rgba(0, 0, 0, 0.5);
+    &:hover::before {
+        filter: blur(0px); /* Remove blur on hover */
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transition: background 0.3s;
+        pointer-events: none;
+        border: 1px solid #333;
+        border-radius: 10px;
+    }
+
+    &:hover::after {
+        background: rgba(0, 0, 0, 0.8);
+        color: #eeeeee;
+    }
 }
 
 .project-content,
@@ -74,4 +93,6 @@
     transform: rotateY(0deg);
     opacity: 1; /* Show back content after the flip */
     pointer-events: auto; /* Enable hover on back content after flip */
+    color: #eeeeee;
+    z-index: 1;
 }
