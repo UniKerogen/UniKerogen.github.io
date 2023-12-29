@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About | Kuang's Place</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/about_styles.css">
+    <link rel="stylesheet" href="css/button.css">
     <script src="script.js" defer></script>
 </head>
 
@@ -22,13 +24,47 @@
                 <a href="project.html" class="dropbtn">Projects</a>
                 <div class="dropdown-menu">
                     <div class="dropdown-content">
-                        <div class="dropdown-item" style="font-size: 16px;">All Projects...</div>
+                        <div class="dropdown-item">
+                            <div class="dropdown-button">
+                                <a href="project.html" style="font-size: 16px">All Projects...</a>
+                            </div>
+                        </div>
                         <div class="dot-dash-line" style="margin: 5px 5px;"></div>
-                        <div class="dropdown-item">&#x2022; GPT Desktop</div>
-                        <div class="dropdown-item">&#x2022; Dino Runner</div>
-                        <div class="dropdown-item">&#x2022; ShroomBot</div>
-                        <div class="dropdown-item">&#x2022; Space Shooter</div>
-                        <div class="dropdown-item">&#x2022; Kuang's Place</div>
+                        <div class="dropdown-item">
+                            <div class="dropdown-button">
+                                <a href="" style="font-size: inherit">
+                                    &#x2022; GPT Desktop
+                                </a>
+                            </div>
+                        </div>
+                        <div class="dropdown-item">
+                            <div class="dropdown-button">
+                                <a href="" style="font-size: inherit">
+                                    &#x2022; Dino Runner
+                                </a>
+                            </div>
+                        </div>
+                        <div class="dropdown-item">
+                            <div class="dropdown-button">
+                                <a href="" style="font-size: inherit">
+                                    &#x2022; ShroomBot
+                                </a>
+                            </div>
+                        </div>
+                        <div class="dropdown-item">
+                            <div class="dropdown-button">
+                                <a href="" style="font-size: inherit">
+                                    &#x2022; Space Shooter
+                                </a>
+                            </div>
+                        </div>
+                        <div class="dropdown-item">
+                            <div class="dropdown-button">
+                                <a href="" style="font-size: inherit">
+                                    &#x2022; Kuang's Place
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -37,8 +73,16 @@
                 <a href="about.html" class="dropbtn">About</a>
                 <div class="dropdown-menu">
                     <div class="dropdown-content">
-                        <div class="dropdown-item">Experience</div>
-                        <div class="dropdown-item">Contact</div>
+                        <div class="dropdown-item">
+                            <div class="dropdown-button">
+                                <a href="about.html#experience" style="font-size: inherit">Experience</a>
+                            </div>
+                        </div>
+                        <div class="dropdown-item">
+                            <div class="dropdown-button">
+                                <a href="about.html#contactInformation" style="font-size: inherit">Contact</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -47,16 +91,107 @@
                 <a href="" class="dropbtn">&#x2022;&#x2022;&#x2022;</a>
                 <div class="dropdown-menu">
                     <div class="dropdown-content">
-                        <div class="dropdown-item">Blog</div>
+                        <div class="dropdown-item">
+                            <div class="dropdown-button">
+                                <a href="" style="font-size: inherit">
+                                    Blog
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <section>
-        <h1 style="padding-left: 36px;">Underconstruction...</h1>
-    </section>
+    <!-- Experience Title -->
+    <div style="margin-top: 120px;"><h1 style="font-size: 36px;">Experience</h1></div>
+    <div style="margin-top: -5px; margin-bottom: 15px;">
+        <span class="download-container">
+            <span class="download-item-container">
+                <img src="resources/buttons/contact_button.png" alt="More Detail Icon" class="more_detail-image" style="width: 15px;">
+                <a href="#contactInformation" class="download">Contact Information</a>
+            </span>
+        </span>
+        <span class="download-container">
+            <span class="download-item-container">
+                <img src="resources/buttons/download_button.png" alt="More Detail Icon" class="more_detail-image" style="width: 15px;">
+                <a href="resources/files/Resume_Kuang Jiang_University of Waterloo_4379931773.pdf" class="download">Resume Download</a>
+            </span>
+        </span>
+    </div>
+
+    <!-- Experience Section -->
+
+    <div class="experience-container" id="experience">
+        <div class="row">
+            <div class="year">
+                <div class="year-content">At the Moment</div>
+            </div>
+            <div class="experience">
+                <div class="experience-content">I am looking for new oppotunities!</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="year">
+                <div class="year-content">2019 Jan. - 2020 Jun.</div>
+            </div>
+            <div class="experience">
+                <div class="experience-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel...</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="year">
+                <div class="year-content">2020 Dec. - 2021 May</div>
+            </div>
+            <div class="experience">
+                <div class="experience-content">Pellentesque habitant morbi tristique senectus et netus et malesuada...</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="dot-dash-line" style="margin: 20px 0px; width: 100%"></div>
+
+    <!-- Contact Information -->
+
+    <div class="contact-container" id="contactInformation">
+        <div class="image-section">
+            <img src="resources/contact_image.png" alt="Contact Image">
+        </div>
+        <div class="content-section">
+            <p class="aligned-content">
+                <img src="resources/buttons/file_icon.png" alt="Email Icon">
+                <a href="resources/files/Resume_Kuang Jiang_University of Waterloo_4379931773.pdf" style="text-decoration: none; color:#cccccc">
+                    Have a Look at My Resume
+                </a>
+            </p>
+            <p class="aligned-content">
+                <img src="resources/buttons/email_icon.png" alt="Email Icon">
+                <a href="mailto:kkjiang27@gmail.com" style="text-decoration: none; color:#cccccc">
+                    Send Me an Mail
+                </a>
+            </p>
+            <p class="aligned-content">
+                <img src="resources/buttons/website_icon.png" alt="LinkedIn Icon">
+                <a href="https://unikerogen.github.io/" style="text-decoration: none; color:#cccccc">
+                    Explore My Website
+                </a>
+            </p>
+            <p class="aligned-content">
+                <img src="resources/buttons/linkedin_icon.png" alt="LinkedIn Icon">
+                <a href="https://www.linkedin.com/in/kuang-jiang/" style="text-decoration: none; color:#cccccc">
+                    Connect with Me on LinkedIn
+                </a>
+            </p>
+            <p class="aligned-content">
+                <img src="resources/buttons/github_icon.png" alt="LinkedIn Icon">
+                <a href="https://github.com/UniKerogen" style="text-decoration: none; color:#cccccc">
+                    Check Me out on Github
+                </a>
+            </p>
+            <!-- Add more text content as needed -->
+        </div>
+    </div>
 
     <!-- Footer Section -->
 
