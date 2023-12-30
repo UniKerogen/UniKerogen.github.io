@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/about_styles.css">
     <link rel="stylesheet" href="css/button.css">
     <script src="script.js" defer></script>
+    <script src="js/experience_display.js"></script>
 </head>
 
 <body>
@@ -122,129 +123,26 @@
         </span>
     </div>
 
-    <!-- Experience Section -->
-
-    <div class="experience-container" id="experience">
-        <div class="row">
-            <div class="year">
-                <div class="year-content">At the Moment</div>
-            </div>
-            <div class="experience">
-                <div class="experience-content">
-                    <h1 style="font-weight: normal; font-size: 16px;">I am looking for new oppotunities!</h1>
-                </div>
-            </div>
+    <!-- Buttons to trigger different JavaScript scripts -->
+    <div class="display-button-container">
+        <div id="overall-button" class="display-button-item-container" onclick="showExperience('all')">
+            <a href="#" class="display-button">Overall</a>
         </div>
-        <div class="row">
-            <div class="year">
-                <div class="year-content">2023</div>
-            </div>
-            <div class="experience">
-                <div class="experience-content">
-                    <h1>Continuing</h1>
-                    <h2>Toronto, Ontario, Canada</h2>
-                    <div class="dot-dash-line" style="margin: 3px"></div>
-                    <p>&#x2022; Loading...</p>
-                    <p>&#x2022; Receving...</p>
-                    <p>&#x2022; Phrasing Content...</p>
-                </div>
-            </div>
+        <div id="experience-button" class="display-button-item-container" onclick="showExperience('work')">
+            <a href="#" class="display-button">Experience</a>
         </div>
-        <div class="row">
-            <div class="year">
-                <div class="year-content">Dec 2022</div>
-            </div>
-            <div class="experience">
-                <div class="experience-content">
-                    <h1>University of Waterloo</h1>
-                    <h2>Waterloo, Ontario, Canada</h2>
-                    <div class="dot-dash-line" style="margin: 3px"></div>
-                    <p2>&#x2022; Master | Electrical Engineering</p2><br>
-                    <p2>&#x2022; Focus: Machine Learning and AI & Software</p2><br>
-                    <p2>&#x2022; GPA: 3.8/4.0</p2><br>
-                    <p2>&#x2022; Related Courses: AI, Algorithm Design, Optimization, Data Analysis, Data Structure, Software Testing/Quality Assurance</p2>
-                </div>
-            </div>
+        <div id="projects-button" class="display-button-item-container" onclick="showExperience('project')">
+            <a href="#" class="display-button">Projects</a>
         </div>
-        <div class="row">
-            <div class="year">
-                <div class="year-content">Dec 2019 - May 2021</div>
-            </div>
-            <div class="experience">
-                <div class="experience-content">
-                    <h1>Bell's Welding and Mechanical Repair</h1>
-                    <h2>Pennsylvania, United States</h2>
-                    <div class="dot-dash-line" style="margin: 3px"></div>
-                    <p>&#x2022; Engineered and implemented an Extract, Transform, Load <hl>(ETL)</hl> pipeline in Python, standardizing metric semantics across teams, managing diverse data sources ranging from <hl>CSV</hl> files, <hl>web forms</hl>, and <hl>HTML</hl>, while adeptly channeling this data into an <hl>AWS SQL</hl> database. This resulted a net workflow efficiency gain of up to <hl>50%</hl>, and curbing data errors within the system by <hl>30%</hl>.</p>
-                    <p>&#x2022; Conducted user interviews and adeptly implemented <hl>Shell</hl> scripts for <hl>automation</hl>, focusing on aspect of <hl>data verification</hl>, <hl>cross-validation</hl>, <hl>data analysis</hl> with <hl>NumPy</hl> and <hl>Pandas</hl>, and generate data <hl>visualization</hl> with <hl>Matplotlib</hl> using <hl>agile</hl> methods. Collaboratively engaged with stakeholders to design various chart types for report generation, effectively slashing analysts’ data reporting pipeline time by <hl>80%</hl>.</p>
-                    <p>&#x2022; Authored and revised over 30 detailed <hl>technical</hl> and solution <hl>documentations</hl> incorporating step-by-step flow charts and diagrams. This streamlined approach facilitated multiple teams to self-serve, consequently reducing <hl>90%</hl> of customer-related queries and enhancing the overall problem-solving efficiency by <hl>40%</hl>.</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="year">
-                <div class="year-content">Dec 2019</div>
-            </div>
-            <div class="experience">
-                <div class="experience-content">
-                    <h1>Temple University</h1>
-                    <h2>Philadelphia, Pennsylvania, United States</h2>
-                    <div class="dot-dash-line" style="margin: 3px"></div>
-                    <p2>&#x2022; Bachlor | Electrical and Computer Engineering</p2><br>
-                    <p2>&#x2022; Minor: Physics</p2><br>
-                    <p2>&#x2022; GPA: 3.8/4.0</p2><br>
-                    <p2>&#x2022; Awards: Honor Student & Dean's List of all semester</p2>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="year">
-                <div class="year-content">Jan 2018 - Aug 2018</div>
-            </div>
-            <div class="experience">
-                <div class="experience-content">
-                    <h1>PJM Interconnection</h1>
-                    <h2>Audubon, Pennsylvania, United States</h2>
-                    <div class="dot-dash-line" style="margin: 3px"></div>
-                    <p>&#x2022; Led and executed <hl>testing</hl> initiatives for management software, including dissecting and analyzing <hl>requirements</hl>, and spearheading proposals for enhancing product logic to elevate overall <hl>user experience</hl>.</p>
-                    <p>&#x2022; Authored, reviewed, and updated over 50 unit and integration tests, in addition to acceptance and exploratory testing in <hl>Python</hl>. Proposed forward-looking optimization strategies aiming at enhancing <hl>runtime efficiency</hl>, including <hl>caching</hl> mechanisms, and the promotion of <hl>code reusability</hl>. These strategies were meticulously organized into robust, <hl>data-driven proposal documents</hl>.</p>
-                    <p>&#x2022; Collaborated closely with hundreds of stakeholders, curating and refining more than 20 detailed <hl>technical documentations</hl>. Leveraged invaluable insights garnered from extensive <hl>customer feedback</hl> to propose comprehensive project improvement plans for the Knowledge Management Center.</p>
-                </div>
-            </div>
+        <div id="education-button" class="display-button-item-container" onclick="showExperience('education')">
+            <a href="#" class="display-button">Education</a>
         </div>
     </div>
 
-    <div class="dot-dash-line" style="margin: 20px 0px; width: 100%"></div>
+    <!-- Experience Section -->
 
-    <!-- Contact Information -->
-
-    <div class="contact-container" id="contactInformation">
-        <div class="image-section">
-            <img src="resources/contact_image.png" alt="Contact Image">
-        </div>
-        <div class="content-section">
-            <a href="resources/files/Resume_Kuang Jiang_University of Waterloo_4379931773.pdf" class="aligned-content">
-                <img src="resources/buttons/file_icon.png" alt="Email Icon">
-                <p>Have a Look at My Resume</p>
-            </a>
-            <a href="mailto:kkjiang27@gmail.com" class="aligned-content">
-                <img src="resources/buttons/email_icon.png" alt="Email Icon">
-                <p>Send Me an Mail</p>
-            </a>
-            <a href="https://unikerogen.github.io/" class="aligned-content">
-                <img src="resources/buttons/website_icon.png" alt="LinkedIn Icon">
-                <p>Explore My Website</p>
-            </a>
-            <a href="https://www.linkedin.com/in/kuang-jiang/" class="aligned-content">
-                    <img src="resources/buttons/linkedin_icon.png" alt="LinkedIn Icon">
-                    <p>Connect with Me on LinkedIn</p>
-            </a>
-            <a href="https://github.com/UniKerogen" class="aligned-content">
-                <img src="resources/buttons/github_icon.png" alt="LinkedIn Icon">
-                <p>Check Me out on Github</p>
-            </a>
-            <!-- Add more text content as needed -->
-        </div>
+    <div class="experience-container" id="experience">
+        <!-- The content will be dynamically loaded here based on the button clicks -->
     </div>
 
     <!-- Footer Section -->
@@ -256,5 +154,7 @@
     <a href="#" class="back-to-top">
         <img src="resources/buttons/back_to_top_button.png" alt="Back to Top" style="width: 20px; height: 20px; padding: 10px">
     </a>
+
+    <!-- Include the JavaScript files -->
 </body>
 </html>
