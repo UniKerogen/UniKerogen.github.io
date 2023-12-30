@@ -118,3 +118,18 @@ function showExperience(experienceType) {
             }
         });
 }
+
+function changeExperience(experienceType) {
+    const existingContent = document.getElementById('experience');
+
+    // Add a dissolving effect to the existing content
+    existingContent.style.transition = 'opacity 0.8s';
+    existingContent.style.opacity = 0;
+
+    // Load new content after a short delay
+    setTimeout(function () {
+        showExperience(experienceType); // Assuming showExperience is defined elsewhere
+        existingContent.style.transition = 'opacity 0.8s';
+        existingContent.style.opacity = 1; // Show the new content
+    }, 800); // Adjust the delay as needed
+}
