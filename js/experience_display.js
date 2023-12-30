@@ -58,7 +58,7 @@ function getRowsByExperience(container, experienceType) {
         case 'education':
             // Disable the 'education-button' and enable other buttons
             disableButton('education-button');
-            enableButtons(['experience-button', 'projects-button', 'overall-button-button']);
+            enableButtons(['experience-button', 'projects-button', 'overall-button']);
             return container.querySelectorAll(".row#education");
             
         case 'project':

@@ -144,13 +144,14 @@
     display: inline-block;
     background-color: #141414;
     border-radius: 20px;
-    padding: 5px 4px;
+    padding: 3px 2px;
     margin-left: 5px;
     transition: color 0.3s;
     border: 1px solid #333333;
+    cursor: pointer;
 
     &:hover {
-        background-color: #222222;
+        border: 1px solid #eeeeee;
     }
 }
 
