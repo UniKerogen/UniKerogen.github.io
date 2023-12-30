@@ -161,6 +161,13 @@ legal_note {
     margin-bottom: 20px;
 }
 
+.solid-line {
+    height: 2px;
+    background: #333;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 
 /* General Sections */
 

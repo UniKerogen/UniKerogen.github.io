@@ -71,17 +71,30 @@
     font-weight: bold;
     font-family: "Courier New", monospace;
     line-height: 1.5;
+    color: #dddddd;
 }
 
 .experience-content h2 {
     margin: 0;
     padding: 0;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bold;
     font-family: "Copperplate", fantasy;
     font-style: italic;
     line-height: 1;
     color: #bbbbbb;
+}
+
+.experience-content h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-weight: auto;
+    font-family: "Copperplate", fantasy;
+    font-style: italic;
+    line-height: 1;
+    color: #aaaaaa;
+    padding-left: 20px;
 }
 
 .experience-content p {
