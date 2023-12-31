@@ -74,6 +74,7 @@
     left: 1%;
     text-align: left;
     padding: 10px; /* Add padding for better visibility */
+    text-decoration: none;
 }
 
 .project-container:hover .project-content {
@@ -87,6 +88,7 @@
     left: 5%;
     opacity: 0;
     pointer-events: none; /* Disable hover on back content before flip */
+    text-decoration: none;
 }
 
 .project-container:hover .project-content-back {

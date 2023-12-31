@@ -54,25 +54,33 @@ function getRowsByExperience(container, experienceType) {
             disableButton('experience-button');
             enableButtons(['overall-button', 'projects-button', 'education-button']);
             return container.querySelectorAll(".row#work");
-            
+
         case 'education':
             // Disable the 'education-button' and enable other buttons
             disableButton('education-button');
             enableButtons(['experience-button', 'projects-button', 'overall-button']);
             return container.querySelectorAll(".row#education");
-            
+
         case 'project':
             // Disable the 'projects-button' and enable other buttons
             disableButton('projects-button');
             enableButtons(['experience-button', 'overall-button', 'education-button']);
             return container.querySelectorAll(".row#project");
-            
+
         default:
             // Disable the 'overall-button' and enable other buttons
             disableButton('overall-button');
             enableButtons(['experience-button', 'projects-button', 'education-button']);
-            return container.querySelectorAll(".row");;
+            return container.querySelectorAll(".row");
     }
+}
+
+function sortRowsDescending(rows) {
+    return Array.from(rows).sort((a, b) => {
+        const idA = parseInt(a.querySelector('.year').id);
+        const idB = parseInt(b.querySelector('.year').id);
+        return idB - idA;
+    });
 }
 
 function showExperience(experienceType) {
@@ -105,8 +113,11 @@ function showExperience(experienceType) {
                         break;
                 }
 
-                // Insert the queried elements into the container
-                rows.forEach(row => {
+                // Sort the rows in descending order
+                const sortedRows = sortRowsDescending(rows);
+
+                // Insert the queried and sorted elements into the container
+                sortedRows.forEach(row => {
                     experienceContainer.appendChild(row.cloneNode(true));
                 });
 
