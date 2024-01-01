@@ -5,6 +5,9 @@
 document.addEventListener("DOMContentLoaded", function () {
     // By default, show all experience
     showExperience('all');
+
+    // Scroll to target section if redirected
+    scrollToHashSection()
 });
 
 // Define the async function to load HTML
@@ -143,4 +146,20 @@ function changeExperience(experienceType) {
         existingContent.style.transition = 'opacity 0.8s';
         existingContent.style.opacity = 1; // Show the new content
     }, 800); // Adjust the delay as needed
+}
+
+function scrollToHashSection() {
+    const hash = window.location.hash;
+
+    if (hash) {
+        const targetElement = document.querySelector(hash);
+
+        if (targetElement) {
+            // Scroll to the target section smoothly
+            targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    }
 }
