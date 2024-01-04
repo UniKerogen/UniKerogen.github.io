@@ -9,9 +9,16 @@
     <link rel="stylesheet" href="/css/label.css">
     <script src="/script.js" defer></script>
     <script src="/js/project_management.js" defer></script>
+    <style>
+        @media screen and (max-width: 800px) {
+            body {
+                overflow-x: auto;
+            }
+        }
+    </style>
 </head>
 
-<body style="min-width: 800px;">
+<body style="min-width: 800px; max-width: 1000px;">
     <!-- Header Section -->
     <header id="globalHeader">
         <!-- Content from global_header.html will be loaded here -->
@@ -25,7 +32,7 @@
     </div>
 
     <!-- Notice Section -->
-    <div style="margin: 0px 0px; padding-bottom: 30px;">
+    <div style="margin: 0px 0px; padding-bottom: 30px; text-align: center;">
         <span style="font-family: Consolas, monospace; font-size: 12px;">
             * Some project details can be found under the "About" tab in the navigation bar.
         </span>

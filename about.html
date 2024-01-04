@@ -8,11 +8,18 @@
     <link rel="stylesheet" href="/css/about_styles.css">
     <link rel="stylesheet" href="/css/button.css">
     <link rel="stylesheet" href="/css/label.css">
+    <style>
+        @media screen and (max-width: 650px) {
+            body {
+                overflow-x: auto;
+            }
+        }
+    </style>
     <script src="/script.js" defer></script>
     <script src="/js/experience_display.js" defer></script>
 </head>
 
-<body>
+<body style="max-width: 800px; min-width: 650px;">
     <!-- Header Section -->
     <header id="globalHeader">
         <!-- Content from global_header.html will be loaded here -->
@@ -20,7 +27,7 @@
 
     <!-- Experience Title -->
 
-    <div style="margin-top: 120px;"><h1 style="font-size: 36px; text-align: center;">Experience</h1></div>
+    <div style="margin-top: 120px;"><h1 style="font-size: 36px; text-align: center; pointer-events: none;">Experience</h1></div>
     <div style="margin-top: -5px; margin-bottom: 15px; text-align: center;">
         <span class="download-container">
             <a href="#contactInformation" class="download-item-container">
@@ -37,7 +44,7 @@
     </div>
 
     <!-- Buttons to trigger different JavaScript scripts -->
-    <div class="display-button-container" style="text-align: center;">
+    <div class="display-button-container" style="text-align: center; pointer-events: none;">
         Filter:
         <div id="overall-button" class="display-button-item-container" onclick="changeExperience('all')">
             <div class="display-button">Overall</div>

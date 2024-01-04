@@ -16,7 +16,12 @@ body {
     min-height: 100vh;
     width: 100vw;
     margin: auto;
-    overflow-x: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 /* Header */
@@ -62,11 +67,10 @@ header {
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
     .header-container {
         padding-left: 0;
     }
-    
 }
 
 .logo {
@@ -196,7 +200,7 @@ footer {
     left: 0;
     background-color: #141414;
     border-top: 1px solid #333;
-    width: inherit;
+    width: 100vw;
     min-width: inherit;
     max-width: inherit;
     padding: auto;
@@ -205,7 +209,7 @@ footer {
 }
 
 .legal_note {
-    width: inherit;
+    width: 100vw;
     min-width: inherit;
     max-width: inherit;
     justify-content: center;
@@ -243,9 +247,8 @@ section {
     background-color: #141414;
     border-bottom: 1px solid #333;
     position: relative;
-    max-width: 800px;
-    min-width: 600px;
     width: calc(inherit * 95%);
+    pointer-events: none;
 }
 
 h1 {

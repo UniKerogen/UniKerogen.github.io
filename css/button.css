@@ -14,6 +14,7 @@
     font-size: 16px;
     transition: background-color 0.3s;
     text-decoration: none;
+    pointer-events: all;
 
     &:hover {
         background-color: #004687;
@@ -33,6 +34,7 @@
 .more_detail-container {
     position: relative;
     padding: 5px;
+    pointer-events: all;
 }
 
 .more_detail-item-container {
@@ -86,6 +88,7 @@
     position: relative;
     display: inline-block;
     padding: 5px;
+    pointer-events: all;
 }
 
 .download-item-container {
@@ -137,6 +140,7 @@
     position: relative;
     display: inline-block;
     padding: 5px;
+    pointer-events: all;
 }
 
 .display-button-item-container {

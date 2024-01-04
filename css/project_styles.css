@@ -75,6 +75,7 @@
     text-align: left;
     padding: 10px; /* Add padding for better visibility */
     text-decoration: none;
+    pointer-events: none;
 }
 
 .project-container:hover .project-content {
