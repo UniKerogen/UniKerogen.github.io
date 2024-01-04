@@ -180,3 +180,43 @@
     color: #eeeeee;
     text-decoration: none;
 }
+
+/* Square Button */
+.square-button-container {
+    position: relative;
+    display: inline-block;
+    padding: 5px;
+    pointer-events: all;
+}
+
+.square-button-item-container {
+    position: relative;
+    display: inline-block;
+    background-color: #141414;
+    padding: 3px 2px;
+    margin-left: 5px;
+    transition: color 0.3s;
+    border: 1px solid #333333;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+        border: 1px solid #eeeeee;
+    }
+}
+.square-button {
+    text-decoration: underline;
+    color: inherit;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    transition: border 0.3s;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    position: relative;
+    z-index: 1;
+    font-size: 13px;
+    color: #eeeeee;
+    text-decoration: none;
+}
