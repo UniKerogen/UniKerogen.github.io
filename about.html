@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About | Kuang's Place</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="css/about_styles.css">
-    <link rel="stylesheet" href="css/button.css">
-    <link rel="stylesheet" href="css/label.css">
-    <script src="script.js" defer></script>
-    <script src="js/experience_display.js" defer></script>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/css/about_styles.css">
+    <link rel="stylesheet" href="/css/button.css">
+    <link rel="stylesheet" href="/css/label.css">
+    <script src="/script.js" defer></script>
+    <script src="/js/experience_display.js" defer></script>
 </head>
 
 <body>
@@ -20,8 +20,8 @@
 
     <!-- Experience Title -->
 
-    <div style="margin-top: 120px;"><h1 style="font-size: 36px;">Experience</h1></div>
-    <div style="margin-top: -5px; margin-bottom: 15px;">
+    <div style="margin-top: 120px;"><h1 style="font-size: 36px; text-align: center;">Experience</h1></div>
+    <div style="margin-top: -5px; margin-bottom: 15px; text-align: center;">
         <span class="download-container">
             <a href="#contactInformation" class="download-item-container">
                 <img src="resources/buttons/contact_button.png" alt="Contact Icon" class="download-image" style="width: 15px;">
@@ -37,7 +37,7 @@
     </div>
 
     <!-- Buttons to trigger different JavaScript scripts -->
-    <div class="display-button-container">
+    <div class="display-button-container" style="text-align: center;">
         Filter:
         <div id="overall-button" class="display-button-item-container" onclick="changeExperience('all')">
             <div class="display-button">Overall</div>
@@ -97,15 +97,7 @@
     </footer>
 
     <a href="#" class="back-to-top">
-        <img src="resources/buttons/back_to_top_button.png" alt="Back to Top" style="width: 20px; height: 20px; padding: 10px">
+        <img src="/resources/buttons/back_to_top_button.png" alt="Back to Top" style="width: 20px; height: 20px; padding: 10px">
     </a>
-
-    <script>
-        // Load Global Header
-        $(document).ready(function() {
-            // Load header.html into the #globalHeader section
-            $("#globalHeader").load("html/globalHeader.html");
-        });
-    </script>
 </body>
 </html>

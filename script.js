@@ -57,7 +57,7 @@ async function loadHTML(url) {
 // Function to execute after HTML is loaded
 async function loadGlobalHeader() {
     // Load all_projects.html content
-    const headerHTML = await loadHTML('html/global_header.html');
+    const headerHTML = await loadHTML('/html/global_header.html');
 
     if (headerHTML) {
         // Get all project containers from the loaded HTML

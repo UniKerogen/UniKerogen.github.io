@@ -32,7 +32,6 @@
 
 .more_detail-container {
     position: relative;
-    display: inline-block;
     padding: 5px;
 }
 
@@ -46,6 +45,7 @@
     padding-top: 0px;
     padding-bottom: 1px;
     transition: color 0.3s;
+    text-decoration: none;
 }
 
 .more_detail-item-container:hover {
