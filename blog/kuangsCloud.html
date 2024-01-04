@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blog | Kuang's Place</title>
+        <link rel="stylesheet" href="/styles.css">
+        <link rel="stylesheet" href="/css/blog.css">
+        <link rel="stylesheet" href="/css/button.css">
+        <link rel="stylesheet" href="/css/label.css">
+        <style>
+            @media screen and (max-width: 550px) {
+                body {
+                    overflow-x: auto;
+                }
+            }
+        </style>
+        <script src="/script.js" defer></script>
+    </head>
+<body style="max-width: 800px; min-width: 550px;">
+    <!-- Header Section -->
+    <header id="globalHeader">
+        <!-- Content from global_header.html will be loaded here -->
+    </header>
+
+    <div style="margin-top: 120px;"></div>
+
+    <!-- Title Section -->
+    <div class="title-container">
+        <div class="title">Kuang's Cloud</div>
+        <div class="time">
+            Created: <span class="publish-time">May 2018</span> |
+            Modified: <span class="modify-time">January 2024</span>
+        </div>
+    </div>
+
+    <!-- Image Section -->
+    <div class="image-container" id="image">
+        <img src="/resources/blog_image/kuangsCloud.png" alt="Image" style="max-height: inherit;">
+    </div>
+
+    <!-- Content Section -->
+    <div class="content-container">
+        <div class="abstract-container">
+            <div class="abstract">abstract</div>
+            <div class="abstract-content" id="abstract-content">
+                Kuang's Cloud stands as a versatile home hub, boasting an array of functionalities including storage capabilities and a dynamic media center.
+            </div>
+        </div>
+        <div class="dot-dash-line"></div>
+        <div class="main-body">
+            <p>Kuang's Cloud, initially conceived as a private home server system for secure file storage and backup, has evolved over time.
+                With a commitment to accessibility, additional features have been seamlessly integrated to transform it into a multifunctional hub. 
+                Now, it not only safeguards files but also doubles as a media center and a nimble task executor, adapting to the dynamic needs of its users.</p>
+            <h3>The Origin</h3>
+            <p>
+                The concept of constructing a compact private server first germinated in my mind several years ago, prompted primarily by my mother's increasing need to transport a substantial volume of files for work and various purposes.
+            </p>
+            <p>
+                Originally confined to paper, the evolving digital landscape transformed these files into terabytes, echoing my mother's sentiment, "What if I require access to files collected years ago, in the moment?"
+                The situation escalated as she accumulated videos, photos, and other files, eventually maxing out a couple of hard drives.
+                So as a Mother's Day gift, my father and I entertained the idea of establishing a private home server to simplify things for her in a relatively "affordable" manner.
+            </p>
+            <p>
+                In contrast to public file servers, a private home server provides enhanced control, particularly in storage. Adding an extra hard drive and configuring it to the right position becomes a straightforward task. Although it requires occasional maintenance, this can be efficiently managed through automated scripts, offering a personalized and efficient solution.
+            </p>
+            <h3>Some Problems</h3>
+            <p>
+                One prominent challenge encountered was related to connection issues.
+                Upon completing the server setup, there were some difficulties connecting to it.
+                Through researches, it was discovered that the dedicated router was not configured properly to allow external access to the server.
+                After some tinkering, the issue was resolved via solutions utilizing virtual private network (VPN).
+                While this provided an effective workaround, it introduced a downside—the network speed slowed down, compromising the ideal speed for file transfers.
+                Nevertheless, as the server was configured on a dedicated sub-network, distinct from the everyday network usage, the impact of the slowed network speed due to the VPN implementation was deemed insignificant.
+            </p>
+            <p>
+                Another challenge was maintaining the server online 24/7, a crucial aspect of the home server's purpose.
+                To achieve this, stringent security measures were implemented, including Two-Factor Authentication (2FA) and custom firewalls to ensure that only registered users could access the server.
+                Additionally, protocols for power loss events and backup procedures within the RAIDed storage were established to safeguard both data and server integrity, reinforcing the overall security framework.
+            </p>
+            <h3>At The Moment</h3>
+            <p>
+                Currently, the server operates seamlessly with enhanced functionality. 
+            </p>
+            <p>
+                It has been upgraded to perform a diverse array of tasks, encompassing automated backups, efficient file transfers, and seamless media streaming. 
+                The introduction of a dynamic media center enables streaming to various devices such as smart TVs, phones, and tablets. 
+                This is made possible through a media server implementation, which dynamically transcodes media files on the fly, ensuring smooth streaming compatibility across a wide range of devices.
+            </p>
+            <p>
+                Furthermore, the server is equipped with the capability to execute simple scripts, offloading various tasks such as media extraction and downloads, automated file backups, and basic home automation. 
+                This functionality adds a layer of automation, enhancing the server's versatility and efficiency in handling diverse tasks.
+            </p>
+            <h3>Future</h3>
+            <p>
+                The server will continue to evolve, adapting to the dynamic needs of its users. 
+                Looking ahead, plans are in place for the server to have its dedicated thermal-controlled room, ensuring an optimal working environment as it continues to evolve.
+            </p>
+            <p>
+                The expansion of server storage is on the horizon, incorporating three distinct spaces: a high-speed, small-volume section utilizing SSDs for frequently accessed files or swift user-to-user file transfers, a standard storage space, and an archival section designated for files older than three years.
+                This strategic separation aims to streamline file organization and enhance overall storage efficiency.
+            </p>
+        </div>
+        <div style="text-align: left;">
+            <div class="square-button-container" style="text-align: left;">
+                <a href="/blog.html" class="square-button-item-container">
+                    <div class="square-button">⬅ &nbsp;Back To All Blogs</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+
+    <footer>
+        <div class="legal_note" id="copyright"></div>
+    </footer>
+
+    <a href="#" class="back-to-top">
+        <img src="/resources/buttons/back_to_top_button.png" alt="Back to Top" style="width: 20px; height: 20px; padding: 10px">
+    </a>
+</body>
+</html>

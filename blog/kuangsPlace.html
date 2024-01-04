@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blog | Kuang's Place</title>
+        <link rel="stylesheet" href="/styles.css">
+        <link rel="stylesheet" href="/css/blog.css">
+        <link rel="stylesheet" href="/css/button.css">
+        <link rel="stylesheet" href="/css/label.css">
+        <style>
+            @media screen and (max-width: 550px) {
+                body {
+                    overflow-x: auto;
+                }
+            }
+        </style>
+        <script src="/script.js" defer></script>
+    </head>
+<body style="max-width: 800px; min-width: 550px;">
+    <!-- Header Section -->
+    <header id="globalHeader">
+        <!-- Content from global_header.html will be loaded here -->
+    </header>
+
+    <div style="margin-top: 120px;"></div>
+
+    <!-- Title Section -->
+    <div class="title-container">
+        <div class="title">Kuang's Place</div>
+        <div class="time">
+            Created: <span class="publish-time">January 2021</span> | 
+            Modified: <span class="modify-time">January 2024</span>
+        </div>
+    </div>
+
+    <!-- Image Section -->
+    <div class="image-container">
+        <img src="/resources/blog_image/kuangsPlace.png" alt="Image" style="max-height: inherit;">
+    </div>
+
+    <!-- Content Section -->
+    <div class="content-container">
+        <div class="abstract-container">
+            <div class="abstract">abstract</div>
+            <div class="abstract-content" id="abstract-content">
+                A dynamic website crafted to serve as a comprehensive portfolio, showcasing a collection of projects and detailing experiences. 
+                Infused with interactive elements, it not only presents a visual journey through various endeavors but also functions as a platform for sharing blogs and captivating pictures.
+            </div>
+        </div>
+        <div class="dot-dash-line"></div>
+        <div class="main-body">
+            <p>
+                The evolution of technology has democratically empowered individuals to host their own websites, whether it's for sharing personal thoughts or showcasing a product. 
+                Websites, in general, serve the purpose of making information more accessible and relatively easy to maintain, thanks to the aid of scripts and other technological advancements.
+            </p>
+            <p>
+                On my website, Kuang's Place, I have curated a portfolio to showcase a selection of projects I've undertaken, along with insights into my experiences and some of my thoughts.
+                Through this blog, I aim to provide a behind-the-scenes look at the intricate process of designing my website, shedding light on the challenges encountered and solutions devised along the way.
+            </p>
+            <h2>Design Process</h2>
+            <h3>&#x2022; Emphatise & Define</h3>
+            <p>
+                In the midst of my job hunt journey, I confronted the limitation of a one-page resume, forced to cherry-pick the most compelling projects and experiences for each application. 
+                This led to an idea: why not aggregate all my projects on a website and include a link in my resume? 
+                This approach not only enables me to showcase a broader range of projects but also allows the resume to serve as a succinct highlight reel of my experiences. 
+                It's a strategic move to provide a comprehensive view of my capabilities while maintaining a focused and impactful resume.
+            </p>
+            <p>
+                Having initially developed a basic version of my website in 2020, the decision to streamline home server functions had put hosting the website on hold. 
+                As I decided to move the host to Github.io, it necessitated a significant upgrade. 
+                This upgrade aims to incorporate more interactive and dynamic design elements, not only to showcase my programming abilities but also to ensure easier maintenance in the future. The evolution of the website reflects my commitment to staying current with design trends and enhancing user experience.
+            </p>
+            <p>
+                Given that GitHub.io operates as a static site, updating functionality may require additional steps and manual configurations. 
+                Implementing workarounds becomes essential to introduce dynamic elements and enhance the site's capabilities within the constraints of a static environment.
+            </p>
+            <h3>&#x2022; User Flow & Prototyping</h3>
+            <p >
+                In the previous design of the website, a top navigation bar facilitated seamless navigation between pages. 
+                The landing page was strategically crafted to showcase highlighted projects, creating an engaging introduction. 
+                Additionally, a dedicated blog page provided a space for sharing written insights, while a link directed users to my home server for further exploration.
+            </p>
+            <h4>Navigation Bar</h4>
+            <p>
+                In the latest design iteration, the navigation bar has been retained but with the removal of direct access to the home server, now having its dedicated page.
+                The navigation bar serves as a comprehensive global navigation feature, ensuring consistency across all pages.
+                It provides easy access to all main sections of the website, allowing users to seamlessly navigate to any desired page from anywhere within the site.
+                This global navigation approach enhances user accessibility and ensures a cohesive browsing experience throughout the entire website.
+            </p>
+            <div style="text-align: center;">
+                <div class="image-container">
+                    <img src="/resources/blog_image/kuangsPlace/navigationBar.png" alt="Navigation Bar" style="width: 100%; height: auto;">
+                </div>
+            </div>
+            <h4>Home Page</h4>
+            <p>
+                In the current home page design, I have retained the showcase of highlighted projects from the previous version.
+                Additionally, new sections have been introduced to spotlight a selection of my programming abilities, offering visitors a more comprehensive and immediate understanding of who I am upon landing on the page. 
+                This thoughtful addition aims to provide a well-rounded overview of my skills and capabilities right from the start, catering to the diverse interests and expectations of the audience.
+            </p>
+            <p>
+                Furthermore, in the highlighted project section, buttons have been strategically incorporated to guide users who wish to delve deeper into the specifics of each project. 
+                This concept is mirrored in the section showcasing my skills, where buttons are provided to seamlessly navigate to specific sections on the about page, depending on the user's interest in learning more, as well as a button to show all other projects. 
+                These intuitive buttons enhance user interactivity, facilitating a smoother and more personalized exploration of the website's content.
+            </p>
+            <div style="text-align: center;">
+                <div class="image-container">
+                    <img src="/resources/blog_image/kuangsPlace/homePage.png" alt="Home Page" style="width: 100%; height: auto;">
+                </div>
+            </div>
+            <h4>Project Page</h4>
+            <p>
+                In the revamped project page, I have implemented a blockage design to prominently display key information about each project, such as its status, publicity, and timeline, in the primary view.
+                Additionally, a succinct one-sentence description is featured in the secondary display. 
+                To enhance user engagement, a flip-card design has been incorporated, triggered upon hovering over a project, revealing a more detailed project description.
+                This thoughtful design approach not only optimizes space but also provides an interactive and informative experience for users exploring the showcased projects.
+            </p>
+            <p>
+                The current project page boasts a visually compelling design, with each project prominently featured against its logo backdrop, providing a visual snapshot of the project's status and key details. 
+                Projects associated with blogs seamlessly link directly to the blog page after displaying their respective descriptions. 
+                This intentional design choice not only enhances the aesthetic appeal but also streamlines navigation, offering users a seamless transition to explore additional content related to each project.
+            </p>
+            <div style="text-align: center;">
+                <div class="image-container">
+                    <img src="/resources/blog_image/kuangsPlace/projectPage.png" alt="Project Page" style="width: 100%; height: auto;">
+                </div>
+            </div>  
+            <h4>About Page</h4>
+            <p>
+                The freshly designed about page serves as a comprehensive showcase of my professional experiences and contact information, featuring links to various social media profiles. 
+                To enhance readability and user engagement, the experiences are presented chronologically with the newest ones placed at the top. 
+                Recognizing that the overall list of experiences may be extensive, designated filter options have been implemented, allowing users to apply preset filters and streamline the display to focus on the experiences most relevant to their interests. 
+            </p>
+            <div style="text-align: center;">
+                <div class="image-container">
+                    <img src="/resources/blog_image/kuangsPlace/aboutPage.png" alt="About Page" style="width: 100%; height: auto;">
+                </div>
+            </div>
+            <h4>Blog Page</h4>
+            <p>
+                The blog page is thoughtfully designed to present a user-friendly experience, featuring lists of blogs with a maximum of 10 blogs displayed per page. 
+                Each blog is encapsulated in a visually appealing block, with a highlighted effect upon hovering for enhanced interactivity. 
+                Within each block, key elements such as the blog image, title, and abstract are prominently placed, providing a succinct overview of the main ideas. 
+                For those eager to delve deeper, a strategically positioned button within the block seamlessly directs users to the designated blog page, where they can explore the content in more detail.
+            </p>
+            <div style="text-align: center;">
+                <div class="image-container">
+                    <img src="/resources/blog_image/kuangsPlace/blogPage.png" alt="Blog Page" style="width: 100%; height: auto;">
+                </div>
+            </div>
+            <h4>Gallery Page</h4>
+            <p>
+                The gallery page is still under construction. More information will be added once it is online.
+            </p>
+            <img src="/resources/blog_image/kuangsPlace/galleryPage.png" alt="Gallery Page" style="width: 100%; height: auto; max-width: 200px;">
+            <h3>&#x2022; Usability Testing</h3>
+            <p>
+                Usability testing was conducted focusing on guiding them through specific areas of the website after landing on the home page. 
+            </p>
+            <p>
+                The primary objective of this testing was to encourage users to navigate to designated sections, prompting them to provide feedback on any questions or confusion they encountered during the process. 
+                This approach aimed to gain valuable insights into the user experience, identify potential usability issues, and refine the website for enhanced user satisfaction and ease of navigation.
+            </p>
+            <h3>&#x2022; Design Iterations</h3>
+            <p>
+                <p>
+                    Following the usability testing, valuable insights were gathered, leading to constructive suggestions and subsequent changes within the website.
+                </p>
+                <p>
+                    Addressing user feedback, adjustments were made to enhance the distinctiveness of Call-to-Action (CTA) buttons, ensuring they stand out as intended. 
+                    Additionally, considerations were given to content size restrictions, allowing for a more comfortable and visually appealing experience. 
+                    Certain elements were also rearranged based on user input, optimizing the layout for improved navigation and overall usability. 
+                    These refinements reflect a commitment to a user-centric design approach, aiming to provide an intuitive and enjoyable browsing experience.
+                </p>
+                <p>
+                    In response to the adjustments made, a subsequent round of usability testing was diligently conducted to ensure the proper implementation of suggested changes and to gather additional feedback. 
+                    This iterative testing approach aimed to validate the effectiveness of the modifications and capture any further insights from users, reinforcing the commitment to continuous improvement in the website's design and functionality.
+                </p>
+            </p>
+            <h2>Execution</h2>
+            <p>
+                The execution of the project involved a harmonious blend of HTML, CSS, and JavaScript to bring the entire vision to life. 
+                HTML provided the structural foundation, CSS added the stylistic elements and visual appeal, while JavaScript infused interactivity and dynamic functionality, seamlessly weaving together a cohesive and engaging user experience. 
+            </p>
+            <p>
+                Given the constraints of GitHub.io as a static site, creative workarounds were implemented, necessitating the use of Shell scripts and Python to automate the generation of certain files and execute backend tasks.
+                These scripts played a pivotal role in streamlining processes and packaging backend task results effectively for static uses. 
+            </p>
+            <h2>Future Implementation</h2>
+            <p>
+                Looking ahead, the future development of the site is envisioned to include the expansion of features into additional areas. 
+                Consideration will be given to incorporating more dynamic elements, where feasible and necessary, to enhance the overall user experience and engagement while navigating the site. 
+                This forward-looking approach aims to continuously evolve the website, ensuring it remains versatile and compelling for users, providing a platform that is both informative and enjoyable.
+            </p>
+            <p>
+                With that being mentioned, I welcome any suggestions or errors identified on the website. 
+                Feel free to submit a request on <a href="https://github.com/UniKerogen/UniKerogen.github.io/issues" style="color: inherit; pointer-events: all;">this page</a>, providing detailed information if necessary.
+            </p>
+        </div>
+        <div style="text-align: left;">
+            <div class="square-button-container">
+                <a href="/blog.html" class="square-button-item-container">
+                    <div class="square-button">⬅ &nbsp;Back To All Blogs</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+
+    <footer>
+        <div class="legal_note" id="copyright"></div>
+    </footer>
+
+    <a href="#" class="back-to-top">
+        <img src="/resources/buttons/back_to_top_button.png" alt="Back to Top" style="width: 20px; height: 20px; padding: 10px">
+    </a>
+</body>
+</html>

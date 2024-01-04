@@ -1,0 +1,76 @@
+/* blog_styles.css */
+/* Author: Kuang Jiang */
+/* Description: styles for blog page */
+
+.blog-container {
+    width: 96%;
+    min-width: inherit;
+    max-width: inherit;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+
+.blog-subcontainer {
+    margin-bottom: 20px;
+    border: 1px solid #303030;
+    transition: color 0.3s ease-in-out, border 0.3s ease-in-out;
+
+    &:hover {
+        border: 1px solid #0076CE;
+    }
+}
+
+.blog-subcontainer-image {
+    margin: 0px auto;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    text-align: center;
+    pointer-events: none;
+}
+
+.blog-subcontainer-img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+.blog-subcontainer-title {
+    margin: 0px 15px;
+    pointer-events: none;
+    
+    & h2 {
+        font-family: "Lucida Bright", serif;
+    }
+
+    & p {
+        font-family: "Papyrus", fantasy;
+    }
+}
+
+.blog-subcontainer-abstract {
+    margin: 0px 15px;
+    margin-top: -30px;
+    pointer-events: none;
+
+    & p {
+        padding: 0 2%;
+        line-height: 1.4;
+        font-family: "Consolas", monospace;
+        font-size: 16px;
+    }
+}
+
+/* Page flipper styles */
+.page-flipper {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.page-flipper button {
+    margin: 0 5px;
+}

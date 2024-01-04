@@ -1,0 +1,125 @@
+/* blog.css */
+/* Author: Kuang Jiang */
+/* Description: CSS file for the actual blog page */
+
+/* Title Section Styles */
+.title-container {
+    width: 90%;
+    margin: 0px auto;
+    pointer-events: none;
+}
+
+.title {
+    font-size: 46px;
+    color: #dddddd;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-family: "Verdana", sans-serif;
+}
+
+.time {
+    font-size: 15px;
+    color: #bbbbbb;
+    margin: 10px 0px;
+    text-align: center;
+}
+
+.publish-time {
+    color: #bbbbbb;
+    font-family: "Papyrus", fantasy;
+}
+
+.modify-time {
+    color: #bbbbbb;
+    font-family: "Papyrus", fantasy;
+}
+
+/* Image Section Styles */
+.image-container {
+    width: 90%;
+    text-align: center;
+    margin: 5px 0px;
+    max-height: 200px;
+    margin: 0px auto;
+    pointer-events: none;
+}
+
+/* Content Section Styles */
+.content-container {
+    width: 90%;
+    text-align: center;
+    position: relative;
+    padding: 10%;
+    margin: 0px auto;
+    pointer-events: none;
+}
+
+.abstract-container {
+    width: 100%;
+    font-size: 20px;
+    color: #cccccc;
+    text-align: left;
+}
+
+.abstract {
+    font-family: "Copperplate", fantasy;
+    font-weight: bold;
+    color: #eeeeee;
+}
+
+.abstract-content {
+    color: #bbbbbb;
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+.main-body {
+    /* Styles for the main body section */
+    width: 90%;
+    text-align: left;
+}
+
+.image-container {
+    display: inline-block;
+    text-align: center; 
+    max-width: 400px; 
+    margin: 0 auto;
+}
+
+/* Text Styles */
+p {
+    font-size: 17px;
+    color: #bbbbbb;
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 46px;
+    color: #dddddd;
+}
+
+h2 {
+    font-size: 32px;
+    color: #dddddd;
+    font-family: "Book Antiqua", serif;
+}
+
+h3 {
+    font-size: 20px;
+    color: #dddddd;
+    font-family: "Courier New", monospace;
+    margin-bottom: -15px;
+}
+
+h4 {
+    font-size: 17px;
+    color: #dddddd;
+    text-decoration: underline;
+    margin-bottom: -15px;
+}
+
+.hl {
+    color: #ffffff;
+    font-weight: bold;
+}
