@@ -4,6 +4,7 @@
 
 /* Label */
 
+
 .bullet {
     display: inline-block;
     padding: 2px 10px;
@@ -13,6 +14,7 @@
     font-size: 12px;
 }
 
+/* Progress */
 .square {
     display: inline-block;
     padding: 2px 4px;
@@ -22,6 +24,7 @@
     font-size: 12px;
 }
 
+/* Programming Language */
 .pill {
     display: inline-block;
     padding: 2px 10px;
@@ -31,6 +34,7 @@
     font-size: 12px;
 }
 
+/* Skills */
 .leaf {
     display: inline-block;
     padding: 2px 10px;
@@ -40,6 +44,7 @@
     font-size: 12px;
 }
 
+/* Publicity */
 .box {
     display: inline-block;
     padding: 0px 8px;
@@ -50,6 +55,18 @@
     font-size: 12px;
 }
 
+/* Article/Image Category */
+.page-tag {
+    display: inline-block;
+    padding: 1px 8px;
+    background-color: #3F00FF;
+    color: #dddddd;
+    border-radius: 0px 0px 8px 8px;
+    font-size: 12px;
+    margin-right: 3px;
+}
+
+/* Project Category */
 .tag {
     display: inline-block;
     padding: 1px 8px;
@@ -58,7 +75,7 @@
     font-size: 12px;
     position: relative;
     border-radius: 5px;
-    margin-right: 3px;
+    margin-right: 5px;
 
     &::after {
         content: '';
@@ -72,6 +89,7 @@
     }
 }
 
+/* Year */
 .arrow-pointer {
     width: 250px;
     height: 50px;
@@ -81,8 +99,8 @@
     font-size: 12px;
     padding:1px 4px;
     padding-left: 10px;
-    border-radius: 15px 0px 0px 0px;
-    margin-right: 7px;
+    border-radius: 15px 0px 0px 15px;
+    margin-right: 8px;
   
     &:after {
       content: '';
@@ -97,16 +115,17 @@
     }
 }
 
+
 .dent-arrow-pointer {
     width: 250px;
     height: 50px;
-    background: #32557f;
+    background: #6050DC;
     color: #dddddd;
     position: relative;
     font-size: 12px;
     padding:1px 8px;
     padding-left: 12px;
-    margin-right: 3px;
+    margin-right: 6px;
   
     &:before {
       content: '';
@@ -115,7 +134,7 @@
       bottom: 0;
       width: 0;
       height: 0;
-      border-left: 8px solid #32557f;
+      border-left: 8px solid #6050DC;
       border-top: 8px solid transparent;
       border-bottom: 8px solid transparent;
     }
@@ -127,5 +146,106 @@
         border-left: 8px solid #141414;
         border-top: 8px solid transparent;
         border-bottom: 8px solid transparent;
+    }
+}
+
+/* List of Tags */
+.starter-tag {
+    width: 250px;
+    height: 50px;
+    color: #dddddd;
+    position: relative;
+    font-size: 12px;
+    padding:3px 5px;
+    padding-left: 7px;
+    border-radius: 0px;
+    margin-right: 8px;
+    border-top: 1px solid #bbbbbb;
+    border-left: 1px solid #bbbbbb;
+    border-bottom: 1px solid #bbbbbb;
+  
+    &:after {
+        content: "";
+        position: absolute;
+        top: 1.5px;
+        right: -8px;
+        width: 16px;
+        height: 16px;
+        border: 1px solid #bbbbbb;
+        border-left: none;
+        border-bottom: none;
+        border-radius: 2.5px 0px 2.5px 2.5px;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+}
+
+.following-tag {
+    width: 250px;
+    height: 50px;
+    color: #dddddd;
+    position: relative;
+    font-size: 12px;
+    padding:3px 5px;
+    padding-left: 16px;
+    border-radius: 0px;
+    margin-right: 8px;
+    border-top: 1px solid #bbbbbb;
+    border-bottom: 1px solid #bbbbbb;
+  
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        top: 1.5px;
+        width: 16px;
+        height: 16px;
+        border: 1px solid #bbbbbb;
+        border-left: none;
+        border-bottom: none;
+        border-radius: 2.5px 0px 2.5px 2.5px;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    &:before {
+        left: -7.5px;
+    }
+
+    &:after {
+        right: -8px;
+    }
+}
+
+.ending-tag {
+    width: 250px;
+    height: 50px;
+    color: #dddddd;
+    position: relative;
+    font-size: 12px;
+    padding:3px 5px;
+    padding-left: 16px;
+    border-radius: 1px 0px 0px 1px;
+    margin-right: 8px;
+    border-top: 1px solid #bbbbbb;
+    border-right: 1px solid #bbbbbb;
+    border-bottom: 1px solid #bbbbbb;
+  
+    &:before {
+        content: "";
+        position: absolute;
+        top: 1.5px;
+        left: -7.5px;
+        width: 16px;
+        height: 16px;
+        border: 1px solid #bbbbbb;
+        border-left: none;
+        border-bottom: none;
+        border-radius: 2.5px 0px 2.5px 2.5px;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        transform: rotate(45deg);
     }
 }

@@ -25,6 +25,13 @@
     text-align: center;
 }
 
+.tags {
+    font-size: 15px;
+    color: #bbbbbb;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
 .publish-time {
     color: #bbbbbb;
     font-family: "Papyrus", fantasy;
