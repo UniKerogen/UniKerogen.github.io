@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blog | Kuang's Place</title>
+        <link rel="stylesheet" href="/styles.css">
+        <link rel="stylesheet" href="/css/blog.css">
+        <link rel="stylesheet" href="/css/button.css">
+        <link rel="stylesheet" href="/css/label.css">
+        <style>
+            @media screen and (max-width: 550px) {
+                body {
+                    overflow-x: auto;
+                }
+            }
+        </style>
+        <script src="/script.js" defer></script>
+    </head>
+<body style="max-width: 800px; min-width: 550px;">
+    <!-- Header Section -->
+    <header id="globalHeader">
+        <!-- Content from global_header.html will be loaded here -->
+    </header>
+
+    <div style="margin-top: 120px;"></div>
+
+    <!-- Title Section -->
+    <div class="title-container">
+        <div class="title">ShroomBot</div>
+        <div class="time">
+            Created: <span class="publish-time">December 2019</span> |
+            Modified: <span class="modify-time">December 2023</span>
+        </div>
+        <div class="tags">
+            <span class="starter-tag">Blog</span>
+            <span class="following-tag">Projects Blueprint</span>
+            <span class="ending-tag">Public</span>
+        </div>
+    </div>
+
+    <!-- Image Section -->
+    <div class="image-container">
+        <img src="/resources/blog_image/shroombot.png" alt="Image" style="max-height: inherit;">
+    </div>
+
+    <!-- Content Section -->
+    <div class="content-container">
+        <div class="abstract-container">
+            <div class="abstract">abstract</div>
+            <div class="abstract-content" id="abstract-content">
+                An intricately designed set of networked robot crafted to emulate human behavior in mushroom picking, tirelessly executing the task 24/7. 
+                Equipped with an onboard camera system and machine learning-powered algorithms, it mimics human-like precision in mushroom picking.
+            </div>
+        </div>
+        <div class="dot-dash-line"></div>
+        <div class="main-body">
+            <p>
+                Initiated as a senior design project, this endeavor involved a collaborative effort among a group of us to investigate the labor shortage prevalent in mushroom farms.
+            </p>
+            <p>
+                Following an extensive series of investigations and research, our proposed solution to address the labor shortage in mushroom farms was a custom-designed and built robot.
+                This innovative system incorporated overhead tracks featuring an easily mountable mechanism, coupled with robots equipped with arm structures that simulated the human behavior of mushroom picking.
+            </p>
+            <h3>Design Process</h3>
+            <p>
+                The design process contained two primary streams: robot design and recognition algorithm design. 
+                The team was divided, with some members focusing predominantly on the robot design, while others dedicated their efforts to refining the algorithm.
+                Despite the division of tasks, regular weekly meetings and progress updates ensured that all team members remained aligned with the project's goals.
+                This collaborative approach facilitated effective communication, allowing for mutual support and assistance when needed, contributing to the overall success of the project.
+            </p>
+            <p style="margin-bottom: 0px;">
+                The following diagram shows a general design flow of the project.
+            </p>
+            <div style="text-align: center; margin-bottom: 20px">
+                <div class="content-image-container">
+                    <img src="/resources/blog_image/shroomBot/shroombot_design_flow.png" alt="Blog Page" style="width: 100%; height: auto;">
+                </div>
+            </div>
+            <h4>Robotic Design (Hardware)</h4>
+            <p>
+                The design of the robot underwent several iterations.
+                The initial design incorporated a claw to mimic human-like grabbing behavior.
+                However, concerns arose about bruising mushrooms, a common issue when pressure exceeds what a mushroom can handle, diminishing its value.
+                Subsequent iterations aimed to address this concern by incorporating a pressure sensor at the claw's grabbing point and increasing the number of fingers to reduce grabbing force.
+                Ultimately, the design settled on using a suction cup for the picking behavior. 
+                The pressure applied through the suction cup was meticulously calculated and emulated on actual mushrooms to ensure it caused no bruising. 
+                This iterative process led to a more refined and mushroom-friendly picking mechanism.
+            </p>
+            <p>
+                In terms of controlling mechanisms, the initial design involved carrying a variation of a laptop motherboard, powerful enough to handle both the calculations for the picking process and the general reinforced learning process of the algorithm.
+                However, this design proved unsuccessful due to space constraints within the mushroom farm and the unsuitable, consistently wet environment for long-term operation.
+                Subsequently, the design transitioned to a central controller that could be located elsewhere in the network, with only a lightweight controller near the mushroom bed capable of conducting calculations and sending images.
+                This approach allowed for a protective coating to be applied to the robot controller, preventing water damage, while the central controller could be more powerful, efficiently handling machine learning model training.
+            </p>
+            <div style="text-align: center; margin-bottom: 20px">
+                <div class="content-image-container">
+                    <img src="/resources/blog_image/shroomBot/shroombot_bot_design.png" alt="Blog Page" style="width: 100%; height: auto;">
+                </div>
+            </div>
+            <p>
+                The ultimate version of the robot design incorporates a rack mounted on the side of the mushroom bed, enabling the robot to relocate itself along with it.
+                A camera is strategically mounted on top of the mushroom bed, providing a clear bird's eye view of the entire mushroom bed.
+                The robot itself is constructed using food-grade materials certified by the FAA, specifically the 316 stainless steel, for the main frame, and high-precision servos for joints.
+                This choice of materials ensures both durability and compliance with stringent safety standards, making it well-suited for the demanding conditions within a mushroom farm.
+            </p>
+            <div style="text-align: center; margin-bottom: 20px">
+                <div class="content-image-container">
+                    <img src="/resources/blog_image/shroomBot/shroombot_final_design.png" alt="Blog Page" style="width: 100%; height: auto;">
+                </div>
+            </div>
+            <h4>Algorithm Design (Software)</h4>
+            <p>
+                The algorithm was meticulously crafted to leverage a combination of OpenCV and machine learning, recognizing the absence of a suitable algorithm tailored to the project's objectives.
+                The algorithm is structured into three key components: first, capturing an image; second, recognition; and finally, outputting the location of the target.
+                The output is designed to provide the controller with a 2D format result indicating the target's location.
+                This thoughtful division of tasks ensures a systematic and effective approach to the mushroom-picking process.
+            </p>
+            <p>
+                The machine learning algorithm underwent two main iterations.
+                The first iteration involved a custom-built Convolutional Neural Network (CNN) for image classification. 
+                However, through research and sample results, it became evident that the custom CNN network was not as efficient for the project's specific case.
+                Consequently, the later version of the machine learning module was developed using a custom YOLO (You Only Look Once) module.
+                This transition aimed at achieving a higher recognition rate with a slight sacrifice in training time, ultimately enhancing the effectiveness of image recognition in the mushroom-picking process.
+            </p>
+            <p>
+                During the training phases, modules were trained both locally and on the Amazon Web Server (AWS).
+                For smaller image batches, typically 2000 diagrams and lower, training primarily took place on the local machine with various constraints and custom settings to find a generally improved solution that correlated with all parameters.
+                Once a preferred set of parameters was determined, image batches were expanded to a larger order, reaching 20,000 images at a time, and this training was predominantly conducted via AWS.
+                Furthermore, to achieve an optimal solution, training methods included ensemble methods, multi-processing, and CPU/GPU-based training methods were employed throughout the process.
+                This comprehensive approach aimed at obtaining the best possible results during the machine learning training phases.
+            </p>
+            <h3>Testing Theories</h3>
+            <p>
+                The testing phase of this project was bifurcated into two segments: one involved simulation-based testing, while the other entailed physical emulation.
+            </p>
+            <h4>Simulation</h4>
+            <p>
+                The simulation testing for the project followed a systematic approach. 
+                After the robot was initially designed using AutoCAD and subsequently moved to Solidworks, simulations were conducted in Solidworks to ensure the robot could reach all specified destinations and even surpass them under extraordinary conditions. 
+                The testing process was automated with manual intervention at specific stages.
+                For instance, a designated point of reach was automatically selected, and the algorithm calculated the reachability of that point, generating the required ankle rotations. 
+                The results were then sent to the simulation for verification. 
+                The testing progress was meticulously recorded and documented for future reference. 
+                In addition to automated testing, manual selection involved hand-picking a set of points for calculation, cross-verified by the robot algorithm's results.
+            </p>
+            <p>
+                Regarding the simulation testing for the recognition algorithm, the process involved acquiring additional images and running them through the program to generate outputs. 
+                These images, collected every other week, were a blend of recordings during tests and new captures in the mushroom farm, ensuring a more accurate result.
+                Furthermore, when comparing machine learning module results between different versions, several ideal images taken in the simulation field were utilized and processed through the system for thorough evaluation.
+            </p>
+            <h4>Emulation</h4>
+            <p>
+                The emulation testing for the project took place in a simulated mushroom farm environment.
+                The robot was affixed to the side of the mushroom bed, with a camera directly mounted on top. 
+                An operation center, established on a laptop, monitored the robot's operations and verified the recognition results.
+                After the general setup was complete, the simulation was executed multiple times, incorporating various placements of mushrooms to emulate the actual growing environment of the mushrooms.
+                This comprehensive testing approach ensured the robot's functionality and recognition accuracy in conditions that closely mirrored real-world scenarios.
+            </p>
+            <p style="margin-bottom: 5px;">
+                The following video shows the first iteration of the robot in emulation with an optimal environment.
+            </p>
+            <div style="text-align: center; margin-bottom: 20px">
+                <video width="360" height="640" controls autoplay>
+                    <source src="/resources/blog_image/shroomBot/shroomot_emulation.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <h3>Outcome</h3>
+            <p>
+                The outcome of the project was exceptionally gratifying, culminating in a successful demonstration at the end of the senior design phase.
+                The project received recognition by securing the third-place position among all senior design projects at that time.
+                The robot showcased its capability to identify pickable mushrooms on the mushroom bed, autonomously position itself for picking, execute the picking process, and deposit the harvested mushroom into a container.
+                Notably, this entire process was accomplished without any human intervention once the run command was initiated.
+            </p>
+            <p>
+                In scenarios where multiple pickable mushrooms were present, the robot systematically picked all of them before moving to the next field.
+                The central control center provided real-time monitoring of the robot's activities, displaying live camera images and footages. 
+            </p>
+            <p>
+                However, it's important to note that the demonstration was a snapshot of the project initiated in the senior design phase, and additional features were planned but could not be implemented within the time constraints of the demonstration.
+            </p>
+            <h3>Next Steps</h3>
+            <p>
+                The potential implementation of the project offers various approaches, with one notable strategy being the expansion of our sample to a comprehensive networked set.
+                Although during our simulation and demo process, the robot was only connected one-to-one to the operation center, the design process inherently considered the possibility of one-to-many connections.
+                The system itself is robust enough to accommodate a collection of robots connecting to it, allowing for efficient monitoring and coordination of their operations.
+            </p>
+            <p>
+                Another facet of development involves advancements in the algorithm. 
+                At each stage of testing, as images accumulate, we primarily relied on manually expanding the training set with more images. 
+                These images were sourced from our testing modules, as previously mentioned during tests, and additionally collected by our team in various mushroom farm environments.
+            </p>
+            <p>
+                Improvements in the algorithm could entail automating the expansion of the training set with images captured during runs that meet specific criteria. 
+                A refined system would involve training new machine learning modules automatically and deploying them at scheduled intervals, such as on a weekly or monthly basis.
+                his approach ensures a continuous enhancement of the algorithm's capabilities based on real-world data, contributing to the adaptability and efficiency of the mushroom-picking robot.
+            </p>
+            <h3>Special Thanks</h3>
+            <p>
+                Special thanks to the group of us from left to right: Garrett B., myself, Andrew T., Abdul A., Brandon B..
+            </p>
+            <div style="text-align: center; margin-bottom: 20px">
+                <div class="content-image-container">
+                    <img src="/resources/blog_image/shroomBot/shroombot_team.png" alt="Blog Page" style="width: 100%; height: auto;">
+                </div>
+            </div>
+            <p>
+                Our sponsor Greenwood Mushrooms and Phillips Mushrooms.
+            </p>
+            <p>
+                Gratitude extends to all those who offered their assistance when it was needed most. 
+                Their contributions were invaluable to the success of the project.
+            </p>
+        </div>
+
+        <div style="text-align: left;">
+            <div class="square-button-container">
+                <a href="/blog.html" class="square-button-item-container">
+                    <span class="square-button">⬅ &nbsp;Back To All Blogs</span>
+                </a>
+            </div>
+            <div class="square-button-container">
+                <a href="/project.html" class="square-button-item-container">
+                    <img src="/resources/buttons/project_icon.png" alt="Image" style="width: 15px; padding-left: 3px; margin: 0; transform: translateY(-50%); position: absolute; top: 50%">
+                    <span class="square-button" style="padding: 5px; padding-left: 23px; margin: 0;">See All Projects</span>
+                </a>
+            </div>
+            <div class="square-button-container">
+                <a href="https://github.com/UniKerogen/ShroomBot" class="square-button-item-container">
+                    <img src="/resources/buttons/github_icon.png" alt="Image" style="width: 15px; padding-left: 3px; margin: 0; transform: translateY(-50%); position: absolute; top: 50%">
+                    <span class="square-button" style="padding: 5px; padding-left: 23px; margin: 0;">View Project On Github</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+
+    <footer>
+        <div class="legal_note" id="copyright"></div>
+    </footer>
+
+    <a href="#" class="back-to-top">
+        <img src="/resources/buttons/back_to_top_button.png" alt="Back to Top" style="width: 20px; height: 20px; padding: 10px">
+    </a>
+</body>
+</html>

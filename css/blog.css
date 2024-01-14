@@ -15,7 +15,8 @@
     margin-bottom: 10px;
     width: 100%;
     text-align: center;
-    font-family: "Verdana", sans-serif;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
 }
 
 .time {
@@ -34,12 +35,10 @@
 
 .publish-time {
     color: #bbbbbb;
-    font-family: "Papyrus", fantasy;
 }
 
 .modify-time {
     color: #bbbbbb;
-    font-family: "Papyrus", fantasy;
 }
 
 /* Image Section Styles */
@@ -107,13 +106,13 @@ h1 {
 }
 
 h2 {
-    font-size: 32px;
+    font-size: 28px;
     color: #dddddd;
-    font-family: "Book Antiqua", serif;
+    font-family: "Arial", sans-serif;
 }
 
 h3 {
-    font-size: 20px;
+    font-size: 24px;
     color: #dddddd;
     font-family: "Courier New", monospace;
     margin-bottom: -15px;
@@ -122,7 +121,6 @@ h3 {
 h4 {
     font-size: 17px;
     color: #dddddd;
-    text-decoration: underline;
     margin-bottom: -15px;
 }
 
