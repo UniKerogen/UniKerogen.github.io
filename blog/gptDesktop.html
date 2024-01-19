@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blog | Kuang's Place</title>
+        <link rel="stylesheet" href="/styles.css">
+        <link rel="stylesheet" href="/css/blog.css">
+        <link rel="stylesheet" href="/css/button.css">
+        <link rel="stylesheet" href="/css/label.css">
+        <style>
+            @media screen and (max-width: 550px) {
+                body {
+                    overflow-x: auto;
+                }
+            }
+        </style>
+        <script src="/script.js" defer></script>
+    </head>
+<body style="max-width: 800px; min-width: 550px;">
+    <!-- Header Section -->
+    <header id="globalHeader">
+        <!-- Content from global_header.html will be loaded here -->
+    </header>
+
+    <div style="margin-top: 120px;"></div>
+
+    <!-- Title Section -->
+    <div class="title-container">
+        <div class="title">GPT Desktop</div>
+        <div class="time">
+            Created: <span class="publish-time">January 2024</span> |
+            Modified: <span class="modify-time">January 2024</span>
+        </div>
+        <div class="tags">
+            <span class="starter-tag">Blog</span>
+            <span class="following-tag">Projects Blueprint</span>
+            <span class="ending-tag">Public</span>
+        </div>
+    </div>
+
+    <!-- Image Section -->
+    <div class="image-container">
+        <img src="/resources/blog_image/gptDesktop/gptDesktop.png" alt="Image" style="max-height: inherit;">
+    </div>
+
+    <!-- Content Section -->
+    <div class="content-container">
+        <div class="abstract-container">
+            <div class="abstract">abstract</div>
+            <div class="abstract-content" id="abstract-content">
+                An exquisite macOS application meticulously designed to seamlessly integrate selected features from GPTs directly onto the desktop.
+            </div>
+        </div>
+        <div class="dot-dash-line"></div>
+        <div class="main-body">
+            <p>
+                In today's rapidly evolving technological landscape, Generative Pretrained Transformers (GPTs) have emerged as powerful AI models that are transforming various industries and aspects of our daily lives. 
+                While the prominence of GPTs continues to grow and interaction with them becomes more accessible, there are still some notable disadvantages associated with the current solution.
+                This blog aspires to unravel the intricacies of a customized application, delving into the meticulous design process, seamless execution, and future prospects for implementation.
+                The goal is to craft tailored applications meticulously designed to overcome the limitations of the current methods of interaction with GPTs.
+            </p>
+            <h2>Design Process</h2>
+            <h3>Step 1. Define Problem</h3>
+            <p>
+                In my daily utilization of GPTs through webpage portals, I consistently encountered the need to toggle between tabs while conducting research for in-depth information.
+                The repetitive clicking became increasingly burdensome over time.
+                Furthermore, the browser-based interface had a tendency to conceal itself when my attention momentarily shifted to other windows, proving inconvenient when I wished to seamlessly transfer a section of information to the application in focus.
+                Lastly, its accessibility was not instantaneous, requiring navigation to the browser before I could utilize it, presenting an additional layer of inefficiency.
+            </p>
+            <p>
+                To mitigate the challenges encountered when utilizing GPTs through webpage portals, an ingenious solution was devised, incorporating three key components: the integration of multiple GPTs with one dedicated to each window, the implementation of an always-on-top floating capability, and the incorporation of a customizable global shortcut.
+            </p>
+            <h3>Step 2. Research & Ideation</h3>
+            <p>
+                Research has indicated that there are two primary modes of interacting with GPTs: via webpages and through APIs.
+            </p>
+            <p>
+                Since the advent of GPTs, developers have been actively seeking ways to seamlessly integrate them into their applications, often resulting in aesthetically pleasing interfaces during conversations.
+                While API interaction necessitates obtaining a special key from GPT providers for information transfer, it is considered a less favorable option due to the private nature of these keys, making public sharing impractical.
+                Another compelling factor behind my choice to employ WebKit stems from my identity as a Mac user.
+                In crafting an application tailored to enhance my daily usage, the utilization of Swift and Xcode presented a more straightforward approach.
+                These development tools facilitated the creation of the application with ease, offering a generative UI design that streamlined the process without unnecessary complications.
+            </p>
+            <p>
+                Hence, I opted for the web-based interaction.
+                Notably, a project already employing this approach for a similar use case is <a href="https://github.com/vincelwt/chatgpt-mac" style="color: inherit; pointer-events: all;">ChatGPT-Mac</a>, a lightweight chatGPT interaction method residing in the menu bar of a Mac.
+                Despite its merits, it falls short of meeting my requirements for a floating window and exhibits some flickering issues with its shortcut.
+                Consequently, I decided to pursue a comparable approach utilizing WebKit to open the web version of GPT, providing a window on the desktop for swift operations and an elegant floating design.
+            </p>
+            <h3>Step 3. Prototyping</h3>
+            <p>
+                This application comprises three significant windows: the main window, tasked with handling the web element; the settings window, where users can configure various aspects of the app; and the tips window, introduced in version 2.0, providing additional guidance and insights.
+            </p>
+            <h4>Main Window</h4>
+            <p>
+                The primary function of the main window is to showcase the web element from the corresponding website, and it is intentionally crafted to occupy the entire window space for a seamless and immersive viewing experience.
+                This design approach prioritizes simplicity and straightforwardness.
+            </p>
+            <div style="text-align: center; margin-bottom: 20px">
+                <div class="content-image-container">
+                    <img src="/resources/blog_image/gptDesktop/app_window.png" alt="Blog Page" style="width: 100%; height: auto;">
+                </div>
+            </div>
+            <h4>Settings Window</h4>
+            <p>
+                In essence, the settings window has been organized into two tabs: one dedicated to general settings and the other specifically tailored for connection details, a feature introduced in version 3.0.
+            </p>
+            <p>
+                Within the general tab of the settings window, three distinct sections have been delineated for user convenience.
+                The GPT selection section enables users to designate the GPT web variant to be opened in the window, offering a selection of commonly used GPTs, including but not limited to ChatGPT and Claude.
+                The floating window settings afford users the flexibility to specify their window preferences, allowing them to opt for either a floating window or the creation of a new, always-floating window.
+                In the global shortcut section, an interactive menu is provided, empowering users to enable and customize a global shortcut for enhanced accessibility.
+            </p>
+            <div style="text-align: center; margin-bottom: 20px">
+                <div class="content-image-container">
+                    <img src="/resources/blog_image/gptDesktop/settingGeneral.png" alt="Blog Page" style="width: 100%; height: auto;">
+                </div>
+            </div>
+            <p>
+                The newly introduced connection tab in version 3.0 takes charge of custom proxy settings.
+                Notably, these proxy settings are applied exclusively when generating a new window. 
+                To complement this feature, a functionality for creating a new window has been seamlessly incorporated below, enhancing the user's control over the application's connection configurations.
+            </p>
+            <div style="text-align: center; margin-bottom: 20px">
+                <div class="content-image-container">
+                    <img src="/resources/blog_image/gptDesktop/settingConnection.png" alt="Blog Page" style="width: 100%; height: auto;">
+                </div>
+            </div>
+            <h4>Tips Window</h4>
+            <p>
+                The tips window serves as an informative guide, offering insights on how to engage in effective conversations with GPTs.
+            </p>
+            <p>
+                Encompassing various aspects such as chatting, coding, rendering, and writing, it provides valuable suggestions for users.
+                It's important to note that while the window provides informative content, the suggestions are intended as guidelines, and users are encouraged to approach their interactions with GPTs based on their preferences and needs rather than adhering strictly to these recommendations.
+            </p>
+            <div style="text-align: center; margin-bottom: 20px">
+                <div class="content-image-container">
+                    <img src="/resources/blog_image/gptDesktop/tips.png" alt="Blog Page" style="width: 100%; height: auto;">
+                </div>
+            </div>
+            <h3>Step 4. User Testing</h3>
+            <p>
+                With a primary objective of enhancing the user experience in daily use, usability testing was meticulously conducted.
+                The evaluation placed a strong emphasis on assessing the application's ease of use, ensuring that navigating and interacting with the features were intuitive and user-friendly.
+            </p>
+            <h3>Step 5. Refinement</h3>
+            <p>
+                Following the invaluable feedback gathered during usability testing, design adjustments were made accordingly. 
+                The modifications aimed to address user insights and enhance the overall user experience, ensuring that the application aligns more closely with user expectations and preferences.
+            </p>
+            <p>
+                One notable modification involves the integration of a quick access menu within the dock.
+                This feature allows users to effortlessly launch a new window with their desired GPTs by simply right-clicking the application icon, eliminating the need for extensive interaction and navigation through the settings menu.
+                This enhancement prioritizes efficiency and provides a more seamless experience for users.
+            </p>
+            <h2>Execution</h2>
+            <p>
+                The execution of the application was carried out using Xcode with a combination of Swift and Storyboard.
+            </p>
+            <p>
+                Although it could have been exclusively implemented in Swift, the inclusion of Storyboard offered a more interactive UI design process featuring generative elements and efficient element displacement.
+                The UI elements were initially crafted and positioned within the Storyboard, subsequently being seamlessly linked to their corresponding sections within the Swift code.
+                This approach provided a balanced and effective methodology for the development process.
+            </p>
+            <h2>Future Implementation</h2>
+            <p>
+                In future iterations, the implementation of the application may encompass an additional option allowing users to place the app within the menu bar.
+                This potential enhancement aims to provide users with greater flexibility in choosing the application's interface, catering to individual preferences and optimizing accessibility for streamlined daily use.
+            </p>
+        </div>
+        <div style="text-align: left;">
+            <div class="square-button-container">
+                <a href="/blog.html" class="square-button-item-container">
+                    <span class="square-button">⬅ &nbsp;Back To All Blogs</span>
+                </a>
+            </div>
+            <div class="square-button-container">
+                <a href="/project.html" class="square-button-item-container">
+                    <img src="/resources/buttons/project_icon.png" alt="Image" style="width: 15px; padding-left: 3px; margin: 0; transform: translateY(-50%); position: absolute; top: 50%">
+                    <span class="square-button" style="padding: 5px; padding-left: 23px; margin: 0;">See All Projects</span>
+                </a>
+            </div>
+            <div class="square-button-container">
+                <a href="https://github.com/UniKerogen/gpt-web-desktop" class="square-button-item-container">
+                    <img src="/resources/buttons/github_icon.png" alt="Image" style="width: 15px; padding-left: 3px; margin: 0; transform: translateY(-50%); position: absolute; top: 50%">
+                    <span class="square-button" style="padding: 5px; padding-left: 23px; margin: 0;">View Project On Github</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+
+    <footer>
+        <div class="legal_note" id="copyright"></div>
+    </footer>
+
+    <a href="#" class="back-to-top">
+        <img src="/resources/buttons/back_to_top_button.png" alt="Back to Top" style="width: 20px; height: 20px; padding: 10px">
+    </a>
+</body>
+</html>
