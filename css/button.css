@@ -220,3 +220,30 @@
     color: #eeeeee;
     text-decoration: none;
 }
+
+/* Image Text Inline Container Button */
+
+.image-text-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    text-decoration: none;
+    margin: 5px 2px;
+    transition: border 0.3s ease-in-out;
+    pointer-events: all;
+    border: 1px solid transparent;
+
+    &:hover {
+        border: 1px solid #318CE7;
+    }
+}
+
+.image-text-container img {
+    width: 20px; /* Set the desired width */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Adjust the spacing between image and text */
+}
+
+.image-text-container p {
+    margin: 0; /* Remove default margin */
+}
