@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blog | Kuang's Place</title>
+        <link rel="stylesheet" href="/styles.css">
+        <link rel="stylesheet" href="/css/blog.css">
+        <link rel="stylesheet" href="/css/button.css">
+        <link rel="stylesheet" href="/css/label.css">
+        <style>
+            @media screen and (max-width: 550px) {
+                body {
+                    overflow-x: auto;
+                }
+            }
+        </style>
+        <script src="/script.js" defer></script>
+    </head>
+<body style="max-width: 800px; min-width: 550px;">
+    <!-- Header Section -->
+    <header id="globalHeader">
+        <!-- Content from global_header.html will be loaded here -->
+    </header>
+
+    <div style="margin-top: 120px;"></div>
+
+    <!-- Title Section -->
+    <div class="title-container">
+        <div class="title">Space Shooter</div>
+        <div class="time">
+            Created: <span class="publish-time">November 2023</span> |
+            Modified: <span class="modify-time">January 2024</span>
+        </div>
+        <div class="tags">
+            <span class="starter-tag">Blog</span>
+            <span class="following-tag">Projects Blueprint</span>
+            <span class="ending-tag">Public</span>
+        </div>
+    </div>
+
+    <!-- Image Section -->
+    <div class="image-container">
+        <img src="/resources/blog_image/spaceShooter/spaceShooter.png" alt="Image" style="max-height: inherit;">
+    </div>
+
+    <!-- Content Section -->
+    <div class="content-container">
+        <div class="abstract-container">
+            <div class="abstract">abstract</div>
+            <div class="abstract-content" id="abstract-content">
+                Embark on an interstellar adventure with a space-themed score-based game that empowers users to navigate through the cosmos, shooting and obliterating enemies along the cosmic journey.
+            </div>
+        </div>
+        <div class="dot-dash-line"></div>
+        <div class="main-body">
+            <p>
+                The Space Shooter is an open-source game featuring a 2D space shooting experience with multiple enemy types, power-ups, and boss battles.
+                Written in Python using SDL2 library for graphics rendering, the project is designed to work on various platforms like Windows, Linux, and macOS.
+            </p>
+            <h3>Design Process</h3>
+            <p>
+                The design process can be compartmentalized into two key areas: the main screen and the game interface itself.
+            </p>
+            <h4>Main Screen</h4>
+            <p>
+                The main screen boasts a dynamic ambiance with a rolling background, complemented by interactive buttons for various actions.
+                Users can seamlessly initiate gameplay or opt for a customized level selection right from the main window.
+                Additionally, quick help prompts are strategically placed, guiding users on spacecraft operation within the game, enhancing the overall user experience.
+            </p>
+            <div style="text-align: center; margin-bottom: 20px">
+                <div class="content-image-container">
+                    <img src="/resources/blog_image/spaceShooter/intro_screen.png" alt="Blog Page" style="width: 100%; height: auto;">
+                </div>
+            </div>
+            <p>
+                Consistency in design extends to other screens, such as the level selection and game ending screens, which mirror the main screen's aesthetic.
+                The buttons on these screens are thoughtfully crafted with a clear Call-to-Action (CTA) behavior and a hovering effect, providing users with intuitive cues for directing their actions throughout the gaming experience.
+            </p>
+            <h4>Game Theories</h4>
+            <p>
+                The gameplay is envisioned as an immersive space adventure, placing users in control of a spacecraft with the objective of shooting down various enemy spaceships.
+                The game introduces three distinct types of adversaries: regular enemies, mini-bosses, and bosses.
+                As users successfully destroy enemies, they accrue scores, progressing through the game.
+                Upon reaching specific score thresholds, mini-bosses and bosses dynamically enter the scene, intensifying the gaming experience.
+            </p>
+            <p>
+                Throughout the gaming experience, the destruction of enemies presents opportunities for upgrade crates to drop.
+                These crates encompass various classes, offering enhancements such as different weapons, shields, extra lives, and more. 
+                Users have the exciting prospect of upgrading their spacecraft by strategically collecting these diverse crates as they navigate through the game.
+            </p>
+            <div style="text-align: center; margin-bottom: 20px">
+                <div class="content-image-container">
+                    <img src="/resources/blog_image/spaceShooter/gameplay.png" alt="Blog Page" style="width: 100%; height: auto;">
+                </div>
+            </div>
+            <h3>Execution</h3>
+            <p>
+                The game's execution primarily leverages Python and its associated libraries.
+                The detailed implementation and optimization strategies encompass the utilization of various data structures, including linked lists and customized classes for efficient information storage.
+                Additionally, parallelization techniques are employed for both calculations and rendering processes, ensuring a smooth and responsive gaming experience.
+            </p>
+            <h3>Future Implementation</h3>
+            <p>
+                In future implementations, enhancements are envisaged in both the gameplay and the game itself.
+                A potential upgrade involves refining the score board functionality. 
+                Currently, it only retains the highest score within a single gameplay session.
+                A future iteration could expand its capabilities, allowing it to store and display all high scores over multiple sessions.
+            </p>
+            <p>
+                Another progressive feature could be introduced in the endless gameplay mode, incorporating a dynamic difficulty system.
+                This innovation would entail a gradual increase in difficulty over time, culminating in reaching a predefined, challenging level, adding an extra layer of excitement and engagement for players.
+            </p>
+        </div>
+        <div style="text-align: left;">
+            <div class="square-button-container">
+                <a href="/blog.html" class="square-button-item-container">
+                    <span class="square-button">⬅ &nbsp;Back To All Blogs</span>
+                </a>
+            </div>
+            <div class="square-button-container">
+                <a href="/project.html" class="square-button-item-container">
+                    <img src="/resources/buttons/project_icon.png" alt="Image" style="width: 15px; padding-left: 3px; margin: 0; transform: translateY(-50%); position: absolute; top: 50%">
+                    <span class="square-button" style="padding: 5px; padding-left: 23px; margin: 0;">See All Projects</span>
+                </a>
+            </div>
+            <div class="square-button-container">
+                <a href="https://github.com/UniKerogen/space-shooter" class="square-button-item-container">
+                    <img src="/resources/buttons/github_icon.png" alt="Image" style="width: 15px; padding-left: 3px; margin: 0; transform: translateY(-50%); position: absolute; top: 50%">
+                    <span class="square-button" style="padding: 5px; padding-left: 23px; margin: 0;">View Project On Github</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+
+    <footer>
+        <div class="legal_note" id="copyright"></div>
+    </footer>
+
+    <a href="#" class="back-to-top">
+        <img src="/resources/buttons/back_to_top_button.png" alt="Back to Top" style="width: 20px; height: 20px; padding: 10px">
+    </a>
+</body>
+</html>
