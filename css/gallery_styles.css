@@ -1,0 +1,90 @@
+/* gallery_styles.css */
+/* Author: Kuang Jiang */
+/* Description: Styles for the gallery page */
+
+.photo-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.column {
+    flex: 1;
+    margin-right: 5px;
+}
+
+.photo {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center; /* Center the content horizontally */
+    cursor: pointer; /* Add cursor pointer for the clickable area */
+}
+
+.popup-content {
+    position: relative;
+    height: 100%;
+}
+
+.popup-image {
+    max-width: 80%; /* Limit the image width to 80% of the popup width */
+    max-height: 80vh; /* Limit the image height to 80% of the viewport height */
+    margin: 10% auto;
+    display: block;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#featured {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+#featured .column {
+    flex: 1;
+    margin-right: 5px;
+}
+
+#featured .photo {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+#cycling,
+#travel {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+#cycling .column,
+#travel .column {
+    flex: 1;
+    margin-right: 5px;
+}
+
+#cycling .photo,
+#travel .photo {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}

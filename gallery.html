@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Sample | Kuang's Place</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/css/gallery_styles.css">
+    <script src="/js/gallery_script.js"></script>
+    <style>
+        @media screen and (max-width: 600px) {
+            body {
+                overflow-x: auto;
+            }
+        }
+    </style>
+    <script src="/script.js" defer></script>
+</head>
+
+<body style="min-width: 600px; max-width: 800px;">
+    <!-- Header Section -->
+    <header id="globalHeader">
+        <!-- Content from global_header.html will be loaded here -->
+    </header>
+    <div style="margin-top: 120px;"></div>
+
+    
+    <div style="text-align: center;">
+        <h3>Featured</h3>
+    </div>
+    <div id="featured" class="photo-container">
+        <!-- Featured photos will be dynamically added here -->
+    </div>
+
+    <div style="text-align: center;">
+        <h3>Cycling</h3>
+    </div>
+    <div id="cycling" class="photo-container">
+        <!-- Cycling photos will be dynamically added here -->
+    </div>
+
+    <div style="text-align: center;">
+        <h3>Travel</h3>
+    </div>
+    <div id="travel" class="photo-container">
+        <!-- Travel photos will be dynamically added here -->
+    </div>
+
+    <div id="popup" class="popup" onclick="closePopup()">
+        <div class="popup-content">
+            <img id="popup-image" class="popup-image">
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+
+    <footer>
+        <div class="legal_note" id="copyright"></div>
+    </footer>
+
+    <a href="#" class="back-to-top">
+        <img src="/resources/buttons/back_to_top_button.png" alt="Back to Top" style="width: 20px; height: 20px; padding: 10px">
+    </a>
+</body>
+</html>
