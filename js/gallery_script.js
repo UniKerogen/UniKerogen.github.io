@@ -24,8 +24,7 @@ function populatePhotos(data) {
 
     // Randomly select three photos for the featured section
     const featuredPhotos = getRandomElements(data, 3);
-    const featuredPhotoElements = featuredPhotos.map(createPhotoElement);
-    insertPhotosInColumns(featuredPhotoElements, featuredContainer);
+    insertPhotosInColumns(featuredPhotos, featuredContainer);
 
     // Categorize the rest of the photos based on the "tag" property
     const cyclingPhotos = [];
@@ -33,29 +32,24 @@ function populatePhotos(data) {
     const foodPhotos = [];
 
     data.forEach((photo, index) => {
-        const photoElement = createPhotoElement(photo);
-
         if (photo.tag === 'cycling') {
-            cyclingPhotos.push(photoElement);
+            cyclingPhotos.push(photo);
         } else if (photo.tag === 'travel') {
-            travelPhotos.push(photoElement);
+            travelPhotos.push(photo);
         } else if (photo.tag === 'food') {
-            foodPhotos.push(photoElement);
+            foodPhotos.push(photo);
         }
     });
 
-    // Randomize the display order for cycling and travel photos
-    const randomizedCyclingPhotos = shuffleArray(cyclingPhotos);
-    const randomizedTravelPhotos = shuffleArray(travelPhotos);
-    const randomizedFoodPhotos = shuffleArray(foodPhotos);
-
-    insertPhotosInColumns(cyclingPhotos, cyclingContainer);
-    insertPhotosInColumns(travelPhotos, travelContainer);
-    insertPhotosInColumns(foodPhotos, foodContainer);
+    insertPhotosInColumns(shuffleArray(cyclingPhotos), cyclingContainer);
+    insertPhotosInColumns(shuffleArray(travelPhotos), travelContainer);
+    insertPhotosInColumns(shuffleArray(foodPhotos), foodContainer);
 }
 
 function insertPhotosInColumns(photos, container) {
     const columns = 3;
+    const columnHeights = new Array(columns).fill(0);
+    
     for (let i = 0; i < columns; i++) {
         const column = document.createElement('div');
         column.classList.add('column');
@@ -63,10 +57,23 @@ function insertPhotosInColumns(photos, container) {
     }
 
     for (let i = 0; i < photos.length; i++) {
-        const columnIndex = i % columns;
+        const columnIndex = getShortestColumnIndex(columnHeights);
         const column = container.getElementsByClassName('column')[columnIndex];
-        column.innerHTML += photos[i];
+
+        column.innerHTML += createPhotoElement(photos[i]);
+
+        columnHeights[columnIndex] += photos[i].height;
     }
+}
+
+function getShortestColumnIndex(columnHeights) {
+    let shortestIndex = 0;
+    for (let i = 1; i < columnHeights.length; i++) {
+        if (columnHeights[i] < columnHeights[shortestIndex]) {
+            shortestIndex = i;
+        }
+    }
+    return shortestIndex;
 }
 
 function shuffleArray(array) {
