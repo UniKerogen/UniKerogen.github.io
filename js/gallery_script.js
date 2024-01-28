@@ -20,6 +20,7 @@ function populatePhotos(data) {
     const featuredContainer = document.getElementById('featured');
     const cyclingContainer = document.getElementById('cycling');
     const travelContainer = document.getElementById('travel');
+    const foodContainer = document.getElementById('food');
 
     // Randomly select three photos for the featured section
     const featuredPhotos = getRandomElements(data, 3);
@@ -29,6 +30,7 @@ function populatePhotos(data) {
     // Categorize the rest of the photos based on the "tag" property
     const cyclingPhotos = [];
     const travelPhotos = [];
+    const foodPhotos = [];
 
     data.forEach((photo, index) => {
         const photoElement = createPhotoElement(photo);
@@ -37,15 +39,19 @@ function populatePhotos(data) {
             cyclingPhotos.push(photoElement);
         } else if (photo.tag === 'travel') {
             travelPhotos.push(photoElement);
+        } else if (photo.tag === 'food') {
+            foodPhotos.push(photoElement);
         }
     });
 
     // Randomize the display order for cycling and travel photos
     const randomizedCyclingPhotos = shuffleArray(cyclingPhotos);
     const randomizedTravelPhotos = shuffleArray(travelPhotos);
+    const randomizedFoodPhotos = shuffleArray(foodPhotos);
 
     insertPhotosInColumns(cyclingPhotos, cyclingContainer);
     insertPhotosInColumns(travelPhotos, travelContainer);
+    insertPhotosInColumns(foodPhotos, foodContainer);
 }
 
 function insertPhotosInColumns(photos, container) {
