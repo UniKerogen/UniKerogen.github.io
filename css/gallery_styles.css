@@ -17,14 +17,22 @@
     width: 100%;
     height: auto;
     cursor: pointer;
+
+    &:hover {
+        filter: brightness(70%);
+        border: 1px solid #eeeeee;
+        transition: border 0.2s ease-in-out;
+    }
 }
 
 .image-container{
     width: 100%;
-
-    &:hover{
-        filter: brightness(70%);
-    }
+    height: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    align-items: center;
+    justify-content: center;
 }
 
 .popup {
