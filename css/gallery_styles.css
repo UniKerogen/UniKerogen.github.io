@@ -19,6 +19,14 @@
     cursor: pointer;
 }
 
+.image-container{
+    width: 100%;
+
+    &:hover{
+        filter: brightness(70%);
+    }
+}
+
 .popup {
     display: none;
     position: fixed;
