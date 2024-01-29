@@ -19,34 +19,35 @@ body {
     overflow-x: hidden;
     overflow-y: auto;
 
-    &::-webkit-scrollbar {
-        height: 0; /* Hide the horizontal scrollbar */
-        width: 10px; /* Set Width for the horizontal scrollbar */
+    /* Scrollbar Styles */
+    /* &::-webkit-scrollbar {
+        height: 0;
+        width: 10px;
     }
 
     &::-webkit-scrollbar-thumb {
-        background-color: #333; /* Change the color of the scrollbar thumb */
-        border: 1px solid #333; /* Add a grey border to the scrollbar thumb */
+        background-color: #333;
+        border: 1px solid #333;
         border-radius: 10px;
     }
     
     &::-webkit-scrollbar-track {
         background-color: #141414;
-    }
+    } */
 
     /* Show the scrollbar when actively scrolling */
-    &:hover::-webkit-scrollbar-thumb {
-        background-color: #555; /* Change the color of the scrollbar thumb on hover */
+    /* &:hover::-webkit-scrollbar-thumb {
+        background-color: #555;
         transition: background-color 1s ease-in;
-    }
+    } */
 
     /* Set a transition for a smooth appearance and disappearance of the scrollbar */
-    &::-webkit-scrollbar-thumb {
+    /* &::-webkit-scrollbar-thumb {
         transition: background-color 1s ease-in;
-    }
+    } */
 
     /* Automatically hide the scrollbar after a period of inactivity */
-    & {
+    /* & {
         overflow: hidden;
         transition: overflow 1s ease-out;
     }
@@ -54,7 +55,7 @@ body {
     &:hover {
         overflow: auto;
         transition: overflow 0.3s ease-in-out;
-    }
+    } */
 }
 
 /* Header */
