@@ -148,7 +148,7 @@ def main():
     with open(output_json_file, 'w') as json_file:
         json.dump(all_photo_data, json_file, indent=4)
 
-    print(f"Created {output_json_file} with all photo entries.")
+    print(f"### Created {output_json_file} with all photo entries. ###")
 
 if __name__ == "__main__":
     main()
