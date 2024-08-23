@@ -29,18 +29,24 @@
 
     <div style="margin-top: 120px;"><h1 style="font-size: 36px; text-align: center; pointer-events: none;">Experience</h1></div>
     <div style="margin-top: -5px; margin-bottom: 15px; text-align: center;">
-        <span class="download-container">
+        <div class="download-container">
             <a href="#contactInformation" class="download-item-container">
                 <img src="resources/buttons/contact_button.png" alt="Contact Icon" class="download-image" style="width: 15px;">
-                <div class="download">Contact Information</div>
+                <div class="download">Jump To Contact</div>
             </a>
-        </span>
-        <span class="download-container">
-            <a href="resources/files/Resume_Kuang Jiang_University of Waterloo_4379931773.pdf" class="download-item-container">
-                <img src="resources/buttons/download_button.png" alt="More Detail Icon" class="download-image" style="width: 15px;">
-                <div class="download">Resume Download</div>
+        </div>
+        <div class="download-container">
+            <a href="/resume.html" class="download-item-container" style="cursor: pointer;" onclick="resumeDownload('true')">
+                <img src="resources/buttons/file_icon_alt.png" alt="Download Button" class="download-image" style="width: 15px;">
+                <div class="download">Download Resume</div>
             </a>
-        </span>
+        </div>
+    </div>
+
+    <!-- Resume Download -->
+
+    <div class="display-button-container" id="resume">
+        <!-- This content will be dynamically loaded based on whether Resume Download button clicks-->
     </div>
 
     <!-- Buttons to trigger different JavaScript scripts -->
@@ -66,7 +72,7 @@
     <!-- Experience Section -->
 
     <div class="experience-container" id="experience">
-        <!-- The content will be dynamically loaded here based on the button clicks -->
+        <!-- The content will be dynamically loaded based on the button clicks -->
     </div>
 
     <div class="dot-dash-line" style="margin: 20px 0px; width: 100%"></div>
@@ -77,7 +83,7 @@
              <img src="resources/contact_image.png" alt="Contact Image">
         </div>
         <div class="content-section">
-            <a href="resources/files/Resume_Kuang Jiang_University of Waterloo_4379931773.pdf" class="aligned-content">
+            <a href="/resume.html" class="aligned-content">
                 <img src="/resources/buttons/file_icon.png" alt="Email Icon">
                 <p>Have a Look at My Resume</p>
             </a>
