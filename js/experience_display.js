@@ -49,31 +49,37 @@ function getRowsByExperience(container, experienceType) {
         case 'all':
             // Disable the 'overall-button' and enable other buttons
             disableButton('overall-button');
-            enableButtons(['experience-button', 'projects-button', 'education-button']);
+            enableButtons(['experience-button', 'projects-button', 'education-button', 'activity-button']);
             return container.querySelectorAll(".row");
 
         case 'work':
             // Disable the 'experience-button' and enable other buttons
             disableButton('experience-button');
-            enableButtons(['overall-button', 'projects-button', 'education-button']);
+            enableButtons(['overall-button', 'projects-button', 'education-button', 'activity-button']);
             return container.querySelectorAll(".row#work");
 
         case 'education':
             // Disable the 'education-button' and enable other buttons
             disableButton('education-button');
-            enableButtons(['experience-button', 'projects-button', 'overall-button']);
+            enableButtons(['experience-button', 'projects-button', 'overall-button', 'activity-button']);
             return container.querySelectorAll(".row#education");
 
         case 'project':
             // Disable the 'projects-button' and enable other buttons
             disableButton('projects-button');
-            enableButtons(['experience-button', 'overall-button', 'education-button']);
+            enableButtons(['experience-button', 'overall-button', 'education-button', 'activity-button']);
             return container.querySelectorAll(".row#project");
+
+        case 'activity':
+            // Disable the 'activity-button' and enable other buttons
+            disableButton('activity-button');
+            enableButtons(['experience-button', 'overall-button', 'education-button', 'projects-button']);
+            return container.querySelectorAll(".row#activity")
 
         default:
             // Disable the 'overall-button' and enable other buttons
             disableButton('overall-button');
-            enableButtons(['experience-button', 'projects-button', 'education-button']);
+            enableButtons(['experience-button', 'projects-button', 'education-button', 'activity-button']);
             return container.querySelectorAll(".row");
     }
 }
