@@ -18,6 +18,7 @@ body {
     margin: auto;
     overflow-x: hidden;
     overflow-y: auto;
+    user-select: none;
 
     /* Scrollbar Styles */
     /* &::-webkit-scrollbar {
