@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Download | Kuang's Place</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/css/resume.css">
+    <link rel="stylesheet" href="css/button.css">
+    <style>
+        @media screen and (max-width: 600px) {
+            body {
+                overflow-x: auto;
+            }
+        }
+    </style>
+    <script src="/script.js" defer></script>
+    <script src="/js/resume.js" defer></script>
+</head>
+
+<body style="min-width: 600px; max-width: 800px;">
+    <!-- Header Section -->
+    <header id="globalHeader">
+        <!-- Content from global_header.html will be loaded here -->
+    </header>
+
+    <!-- Title -->
+    <div style="margin-top: 120px;"><h1 style="font-size: 36px; text-align: center; pointer-events: none;">Resumes</h1></div>
+
+    <section>
+        <div style="text-align: center;">
+            <div class="display-button-container" style="text-align: center; pointer-events: none;">
+                Focus:
+                <div id="software-button" class="display-button-item-container" onclick="changeResume('software')">
+                    <div class="display-button">Software</div>
+                </div>
+                <div id="ml-button" class="display-button-item-container" onclick="changeResume('ml')">
+                    <div class="display-button">ML/AI</div>
+                </div>
+                <div id="data-button" class="display-button-item-container" onclick="changeResume('data')">
+                    <div class="display-button">Data</div>
+                </div>
+                <div id="full-stack-button" class="display-button-item-container" onclick="changeResume('full-stack')">
+                    <div class="display-button">Full Stack</div>
+                </div>
+                <!-- <div id="ba-button" class="display-button-item-container" onclick="changeResume('ba')">
+                    <div class="display-button">BA</div>
+                </div> -->
+            </div>
+        </div>
+
+        <div class="resume-container">
+            <div class="preview-column">
+                <!-- <img src="/resources/buttons/description_icon.png" style="filter: brightness(80%); width: 100%"> -->
+            </div>
+            <div class="text-column">
+                <!-- <h2>Software Engineering</h2>
+                <div class="dot-dash-line" style="margin-top: 2px; margin-bottom: -2px"></div>
+                <p>Some very brief descriptions</p>
+                <div class="download-container">
+                    <a href="" class="download-item-container" style="cursor: pointer;">
+                        <img src="/resources/buttons/download_button.png" alt="Download Button" class="download-image" style="width: 15px;">
+                        <div class="download">Download</div>
+                    </a>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+
+    <footer style="margin-top: 0px;">
+        <div class="legal_note" id="copyright"></div>
+    </footer>
+
+    <a href="#" class="back-to-top">
+        <img src="/resources/buttons/back_to_top_button.png" alt="Back to Top" style="width: 20px; height: 20px; padding: 10px">
+    </a>
+</body>
+</html>
