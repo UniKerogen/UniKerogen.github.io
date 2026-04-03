@@ -1,0 +1,235 @@
+/* layout.css */
+/* Shared page shell, header, footer, and section layout */
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+body.page-shell {
+    min-width: 0 !important;
+    max-width: 1120px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(17, 17, 17, 0.88);
+    backdrop-filter: blur(18px);
+}
+
+header:hover {
+    height: auto;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    width: min(1120px, calc(100% - 32px));
+    min-height: 72px;
+    margin: 0 auto;
+    padding: 0 8px;
+    background: transparent;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.header-container::-webkit-scrollbar,
+.navigation::-webkit-scrollbar {
+    display: none;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: var(--text-primary);
+    font-size: 24px;
+    font-weight: bold;
+    padding-left: 0;
+}
+
+.logo img {
+    display: block;
+    width: 30px;
+    height: auto;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    flex-direction: row;
+}
+
+.navigation ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    list-style-type: none;
+    text-align: left;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation li {
+    list-style: none;
+    position: relative;
+    padding: 8px 6px;
+    margin-right: 0;
+}
+
+.navigation a,
+.dropbtn {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.navigation a:hover,
+.navigation a:focus-visible,
+.dropbtn:hover,
+.dropbtn:focus-visible {
+    color: var(--accent-strong);
+}
+
+.navigation li:hover .dropdown-menu,
+.navigation li:focus-within .dropdown-menu {
+    display: block;
+    opacity: 1;
+    transition-delay: 0.3s;
+    height: auto;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: relative;
+    padding-top: 8px;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.dropdown-content {
+    border: 1px solid var(--border-strong);
+    border-radius: 12px;
+    padding: 4px 8px;
+    background-color: rgba(26, 26, 26, 0.96);
+    box-shadow: var(--shadow-soft);
+}
+
+.dropdown-item {
+    position: relative;
+    text-align: left;
+    min-width: 100%;
+    color: var(--text-secondary);
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    padding: 5px 5px;
+    white-space: nowrap;
+    transition: color 0.3s, background-color 0.1s;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+.dropdown-item:hover {
+    background-color: var(--accent-soft);
+    color: var(--text-primary);
+}
+
+.dropdown-button {
+    width: inherit;
+    color: inherit;
+    font-size: inherit;
+    text-decoration: none;
+}
+
+section {
+    width: 100%;
+    padding: 40px 0;
+    margin: 0;
+    border-bottom: 1px solid var(--border);
+    background-color: transparent;
+    position: relative;
+    pointer-events: auto;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: auto 0 0;
+    border-top: 1px solid var(--border);
+    background: transparent;
+}
+
+.legal_note {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    padding: 24px 0 32px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 900px) {
+    body,
+    body.page-shell {
+        padding: 0 18px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    body,
+    body.page-shell {
+        padding: 0 14px;
+    }
+
+    .header-container {
+        width: calc(100% - 20px);
+        min-height: 64px;
+        padding: 0 4px;
+    }
+
+    .navigation {
+        gap: 4px;
+    }
+
+    .navigation a,
+    .dropbtn {
+        font-size: 0.9rem;
+    }
+
+    section {
+        padding: 32px 0;
+    }
+}

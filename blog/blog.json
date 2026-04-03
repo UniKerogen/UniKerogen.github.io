@@ -1,37 +1,44 @@
 [
   {
-    "title": "Universal Sudio Orlando",
+    "title": "Universal Studio Orlando",
     "url": "/blog/orlandoUniversal.html",
-    "publish_time": "January 2024"
+    "publish_time": "January 2024",
+    "category": "travel"
   },
   {
     "title": "GPT Desktop",
     "url": "/blog/gptDesktop.html",
-    "publish_time": "January 2024"
+    "publish_time": "January 2024",
+    "category": "project"
   },
   {
     "title": "Space Shooter",
     "url": "/blog/spaceShooter.html",
-    "publish_time": "November 2023"
+    "publish_time": "November 2023",
+    "category": "project"
   },
   {
     "title": "The 2023 January of Japan",
     "url": "/blog/japan2023.html",
-    "publish_time": "April 2023"
+    "publish_time": "April 2023",
+    "category": "travel"
   },
   {
-    "title": "Kuang's Place",
-    "url": "/blog/kuangsPlace.html",
-    "publish_time": "March 2020"
+    "title": "Kellan's Place",
+    "url": "/blog/kellans-place.html",
+    "publish_time": "March 2020",
+    "category": "project"
   },
   {
     "title": "ShroomBot",
     "url": "/blog/shroomBot.html",
-    "publish_time": "December 2019"
+    "publish_time": "December 2019",
+    "category": "project"
   },
   {
-    "title": "Kuang's Cloud",
-    "url": "/blog/kuangsCloud.html",
-    "publish_time": "May 2018"
+    "title": "Kellan's Cloud",
+    "url": "/blog/kellans-cloud.html",
+    "publish_time": "May 2018",
+    "category": "project"
   }
 ]

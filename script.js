@@ -38,7 +38,9 @@ function scrollToTop() {
 function updateCopyrightYear() {
     var currentYear = new Date().getFullYear();
     var copyrightElement = document.getElementById("copyright");
-    copyrightElement.textContent = "Copyright © 2015-" + currentYear + " Kuang Jiang. All rights reserved.";
+    if (copyrightElement) {
+        copyrightElement.textContent = "Copyright © 2015-" + currentYear + " Kellan Jiang. All rights reserved.";
+    }
 }
 
 // Define the async function to load HTML

@@ -3,49 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project | Kuang's Place</title>
-    <link rel="stylesheet" href="/styles.css">
+    <title>Projects | Kellan Jiang | Data Engineer</title>
+    <meta name="description" content="Project archive for Kellan Jiang, including product builds, engineering projects, infrastructure work, machine learning systems, and technical experiments.">
+    <link rel="canonical" href="https://unikerogen.github.io/project.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Projects | Kellan Jiang | Data Engineer">
+    <meta property="og:description" content="A broader view of systems, tools, and technical work across software, data, robotics, and platform development.">
+    <meta property="og:url" content="https://unikerogen.github.io/project.html">
+    <meta property="og:image" content="https://unikerogen.github.io/resources/project_image/money_flow.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Projects | Kellan Jiang | Data Engineer">
+    <meta name="twitter:description" content="A broader view of systems, tools, and technical work across software, data, robotics, and platform development.">
+    <meta name="twitter:image" content="https://unikerogen.github.io/resources/project_image/money_flow.png">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/components.css">
     <link rel="stylesheet" href="/css/project_styles.css">
     <link rel="stylesheet" href="/css/label.css">
     <script src="/script.js" defer></script>
     <script src="/js/project_management.js" defer></script>
-    <style>
-        @media screen and (max-width: 800px) {
-            body {
-                overflow-x: auto;
-            }
-        }
-    </style>
 </head>
 
-<body style="min-width: 800px; max-width: 1000px;">
+<body class="page-shell">
     <!-- Header Section -->
     <header id="globalHeader">
         <!-- Content from global_header.html will be loaded here -->
     </header>
 
-    <div style="margin-top: 120px"><h1 style="font-size: 44px; text-align: center;">All Projects</h1></div>
+    <main class="projects-main">
+        <section class="projects-hero">
+            <div class="projects-kicker">Kellan Jiang | Projects</div>
+            <h1 class="projects-title">Projects</h1>
+            <p class="projects-subtitle">
+                This page collects product builds, engineering projects, infrastructure work, and technical experiments across software, data, robotics, and platform-focused development.
+            </p>
+        </section>
 
-    <!-- Project -->
-    <div id="sorted-projects-container" style="width: 100%; padding-bottom: 20px">
-        <!-- Sorted Projects will be displayed here -->
-    </div>
+        <section class="projects-grid-section">
+            <!-- <div class="projects-grid-header">
+                <h2>Project Archive</h2>
+                <p>
+                    Sorted by year, with a mix of professional, academic, and independent technical work.
+                </p>
+            </div> -->
 
-    <!-- Notice Section -->
-    <div style="margin: 0px 0px; padding-bottom: 30px; text-align: center;">
-        <span style="font-family: Consolas, monospace; font-size: 12px;">
-            * Some project details can be found under the "About" tab in the navigation bar.
-        </span>
-    </div>
+            <div id="sorted-projects-container" class="projects-grid-shell">
+                <!-- Sorted Projects will be displayed here -->
+            </div>
+        </section>
+
+        <section class="projects-note-section">
+            <div class="projects-note">
+                Some projects have expanded context, implementation notes, or related experience details on the About and Blog pages.
+            </div>
+        </section>
+    </main>
 
     <!-- Footer Section -->
 
-    <footer style="width: 100vw;">
+    <footer>
         <div class="legal_note" id="copyright"></div>
     </footer>
 
     <a href="#" class="back-to-top">
-        <img src="/resources/buttons/back_to_top_button.png" alt="Back to Top" style="width: 20px; height: 20px; padding: 10px">
+        <img src="/resources/buttons/back_to_top_button.png" alt="Back to Top">
     </a>
 </body>
 </html>

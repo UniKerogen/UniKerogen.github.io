@@ -76,17 +76,17 @@
     position: relative;
     border-radius: 5px;
     margin-right: 5px;
+}
 
-    &::after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        right: -5px; /* Adjust this value to control the distance between the pill and the triangle */
-        border-width: 6px 0 6px 6px;
-        border-style: solid;
-        border-color: transparent transparent transparent #0E3386;
-        transform: translateY(-50%);
-    }
+.tag::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -5px;
+    border-width: 6px 0 6px 6px;
+    border-style: solid;
+    border-color: transparent transparent transparent #0E3386;
+    transform: translateY(-50%);
 }
 
 /* Year */
@@ -101,18 +101,18 @@
     padding-left: 10px;
     border-radius: 15px 0px 0px 15px;
     margin-right: 8px;
-  
-    &:after {
-      content: '';
-      position: absolute;
-      right: -8px;
-      bottom: 0;
-      width: 0;
-      height: 0;
-      border-left: 8px solid #32557f;
-      border-top: 8px solid transparent;
-      border-bottom: 8px solid transparent;
-    }
+}
+
+.arrow-pointer:after {
+    content: '';
+    position: absolute;
+    right: -8px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 8px solid #32557f;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
 }
 
 
@@ -126,27 +126,30 @@
     padding:1px 8px;
     padding-left: 12px;
     margin-right: 6px;
-  
-    &:before {
-      content: '';
-      position: absolute;
-      right: -7px;
-      bottom: 0;
-      width: 0;
-      height: 0;
-      border-left: 8px solid #6050DC;
-      border-top: 8px solid transparent;
-      border-bottom: 8px solid transparent;
-    }
+}
 
-    &:after {
-        content: '';
-        position: absolute;
-        left: 0; bottom: 0; width: 0; height: 0;
-        border-left: 8px solid #141414;
-        border-top: 8px solid transparent;
-        border-bottom: 8px solid transparent;
-    }
+.dent-arrow-pointer:before {
+    content: '';
+    position: absolute;
+    right: -7px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 8px solid #6050DC;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+}
+
+.dent-arrow-pointer:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 8px solid #141414;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
 }
 
 /* List of Tags */
@@ -163,22 +166,22 @@
     border-top: 1px solid #bbbbbb;
     border-left: 1px solid #bbbbbb;
     border-bottom: 1px solid #bbbbbb;
-  
-    &:after {
-        content: "";
-        position: absolute;
-        top: 1.5px;
-        right: -8px;
-        width: 16px;
-        height: 16px;
-        border: 1px solid #bbbbbb;
-        border-left: none;
-        border-bottom: none;
-        border-radius: 2.5px 0px 2.5px 2.5px;
-        -webkit-transform: rotate(45deg);
-        -moz-transform: rotate(45deg);
-        transform: rotate(45deg);
-    }
+}
+
+.starter-tag:after {
+    content: "";
+    position: absolute;
+    top: 1.5px;
+    right: -8px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #bbbbbb;
+    border-left: none;
+    border-bottom: none;
+    border-radius: 2.5px 0px 2.5px 2.5px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
 }
 
 .following-tag {
@@ -193,30 +196,30 @@
     margin-right: 8px;
     border-top: 1px solid #bbbbbb;
     border-bottom: 1px solid #bbbbbb;
-  
-    &:before,
-    &:after {
-        content: "";
-        position: absolute;
-        top: 1.5px;
-        width: 16px;
-        height: 16px;
-        border: 1px solid #bbbbbb;
-        border-left: none;
-        border-bottom: none;
-        border-radius: 2.5px 0px 2.5px 2.5px;
-        -webkit-transform: rotate(45deg);
-        -moz-transform: rotate(45deg);
-        transform: rotate(45deg);
-    }
+}
 
-    &:before {
-        left: -7.5px;
-    }
+.following-tag:before,
+.following-tag:after {
+    content: "";
+    position: absolute;
+    top: 1.5px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #bbbbbb;
+    border-left: none;
+    border-bottom: none;
+    border-radius: 2.5px 0px 2.5px 2.5px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
 
-    &:after {
-        right: -8px;
-    }
+.following-tag:before {
+    left: -7.5px;
+}
+
+.following-tag:after {
+    right: -8px;
 }
 
 .ending-tag {
@@ -232,20 +235,118 @@
     border-top: 1px solid #bbbbbb;
     border-right: 1px solid #bbbbbb;
     border-bottom: 1px solid #bbbbbb;
-  
-    &:before {
-        content: "";
-        position: absolute;
-        top: 1.5px;
-        left: -7.5px;
-        width: 16px;
-        height: 16px;
-        border: 1px solid #bbbbbb;
-        border-left: none;
-        border-bottom: none;
-        border-radius: 2.5px 0px 2.5px 2.5px;
-        -webkit-transform: rotate(45deg);
-        -moz-transform: rotate(45deg);
-        transform: rotate(45deg);
-    }
+}
+
+.ending-tag:before {
+    content: "";
+    position: absolute;
+    top: 1.5px;
+    left: -7.5px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #bbbbbb;
+    border-left: none;
+    border-bottom: none;
+    border-radius: 2.5px 0px 2.5px 2.5px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* Phase 1 foundation overrides */
+
+.bullet,
+.square,
+.pill,
+.leaf,
+.box,
+.page-tag,
+.tag,
+.arrow-pointer,
+.dent-arrow-pointer,
+.starter-tag,
+.following-tag,
+.ending-tag {
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.square,
+.pill,
+.leaf {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: var(--text-secondary);
+}
+
+.project-year {
+    margin-right: 5px;
+}
+
+.box {
+    background-color: transparent;
+    border-color: var(--border-strong);
+    color: var(--text-secondary);
+}
+
+.page-tag,
+.tag {
+    background-color: var(--accent);
+    color: #1a1207;
+    font-weight: 700;
+}
+
+.tag::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -5px;
+    border-width: 6px 0 6px 6px;
+    border-style: solid;
+    border-color: transparent transparent transparent var(--accent);
+    transform: translateY(-50%);
+}
+
+.arrow-pointer {
+    background: #5b3415;
+    color: var(--text-primary);
+}
+
+.arrow-pointer::after {
+    content: '';
+    position: absolute;
+    right: -8px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 8px solid #5b3415;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+}
+
+.dent-arrow-pointer {
+    background: #7a4110;
+    color: var(--text-primary);
+}
+
+.dent-arrow-pointer::before {
+    content: '';
+    position: absolute;
+    right: -7px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 8px solid #7a4110;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+}
+
+.dent-arrow-pointer::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 8px solid var(--bg);
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
 }

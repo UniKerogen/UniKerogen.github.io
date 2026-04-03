@@ -2,48 +2,168 @@
 /* Author: Kuang Jiang */
 /* Description: CSS file for the resume download page */
 
+.resume-main {
+    padding-top: 92px;
+}
+
+.resume-hero,
+.resume-selector-section {
+    padding: 40px 0;
+}
+
+.resume-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+    color: var(--accent-strong);
+    font-size: 0.88rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.resume-kicker::before {
+    content: "";
+    width: 36px;
+    height: 1px;
+    background: rgba(245, 158, 11, 0.75);
+}
+
+.resume-title {
+    max-width: 17ch;
+    margin: 0 0 16px;
+}
+
+.resume-subtitle {
+    margin: 0;
+    max-width: none;
+    font-size: 1.05rem;
+}
+
+.resume-selector-card,
 .resume-container {
-    display: flex; /* This ensures the child elements are laid out in a row */
-    flex-direction: row; /* Explicitly setting the direction to row */
-    /* border: 1px solid #ccc; */
-    padding: 20px;
-    margin: 20px auto;
-    width: 80%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    box-shadow: var(--shadow-soft);
+}
+
+.resume-selector-card {
+    padding: 24px 24px 18px;
+    margin-bottom: 18px;
+}
+
+.resume-selector-header h2 {
+    margin: 0 0 8px;
+}
+
+.resume-selector-header p {
+    margin: 0;
+}
+
+.resume-filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.resume-filter-label {
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.resume-filter-buttons {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.resume-filter-buttons .display-button-item-container {
+    margin-left: 0;
+}
+
+.resume-container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 24px;
+    padding: 24px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .preview-column {
     flex: 1;
-    margin-right: 20px;
-    /* border: 1px solid #ccc; */
-    cursor: none;
+    min-width: 150px;
+    max-width: 180px;
+    cursor: default;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.03);
 }
 
 .preview-column iframe {
     width: 100%;
-    /* height: 400px; Adjust the height as needed */
     border: none;
-    cursor: none;
+    cursor: default;
+}
+
+.resume-preview-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.resume-preview-image.is-placeholder {
+    filter: brightness(80%);
 }
 
 .text-column {
-    flex: 9; /* Make the text column the same width as the preview column */
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* border: 1px solid #333; */
 }
 
 .text-column h2 {
     margin: 0;
-    font-size: 24px;
-    color: #ddd;
+    font-size: 1.6rem;
+    color: var(--text-primary);
 }
 
 .text-column p {
     margin: 10px 0;
-    font-size: 16px;
-    color: #bbb;
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
+
+.resume-divider {
+    margin-top: 2px;
+    margin-bottom: -2px;
+}
+
+.resume-summary-line {
+    margin-bottom: -2px !important;
+    line-height: 1.3;
+}
+
+.resume-download-container {
+    margin-top: 10px;
+}
+
+.resume-download-link.is-disabled {
+    cursor: default;
+    pointer-events: none;
 }
 
 /* Fade out effect */
@@ -54,4 +174,46 @@
 /* Fade in effect */
 .fade-in {
     opacity: 1;
+}
+
+@media screen and (max-width: 780px) {
+    .resume-subtitle,
+    .resume-title {
+        max-width: 100%;
+    }
+
+    .resume-filter-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .resume-container {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .preview-column {
+        max-width: 100%;
+        min-width: 0;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .resume-hero,
+    .resume-selector-section {
+        padding: 32px 0;
+    }
+
+    .resume-selector-card,
+    .resume-container {
+        padding: 18px;
+    }
+
+    .text-column h2 {
+        font-size: 1.3rem;
+    }
+
+    .text-column p {
+        font-size: 0.96rem;
+    }
 }

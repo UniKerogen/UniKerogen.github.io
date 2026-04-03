@@ -3,57 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery | Kuang's Place</title>
-    <link rel="stylesheet" href="/styles.css">
+    <title>Gallery | Kellan Jiang | Data Engineer</title>
+    <meta name="description" content="A visual gallery from Kellan Jiang featuring travel, cycling, food, and selected photography.">
+    <link rel="canonical" href="https://unikerogen.github.io/gallery.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Gallery | Kellan Jiang | Data Engineer">
+    <meta property="og:description" content="Travel, cycling, food, and selected photography collected alongside the technical work.">
+    <meta property="og:url" content="https://unikerogen.github.io/gallery.html">
+    <meta property="og:image" content="https://unikerogen.github.io/resources/personal_showcase.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Gallery | Kellan Jiang | Data Engineer">
+    <meta name="twitter:description" content="Travel, cycling, food, and selected photography collected alongside the technical work.">
+    <meta name="twitter:image" content="https://unikerogen.github.io/resources/personal_showcase.png">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/components.css">
     <link rel="stylesheet" href="/css/gallery_styles.css">
     <script src="/js/gallery_script.js"></script>
-    <style>
-        @media screen and (max-width: 600px) {
-            body {
-                overflow-x: auto;
-            }
-        }
-    </style>
     <script src="/script.js" defer></script>
 </head>
 
-<body style="min-width: 600px; max-width: 800px;">
+<body class="page-shell">
     <!-- Header Section -->
     <header id="globalHeader">
         <!-- Content from global_header.html will be loaded here -->
     </header>
 
-    <!-- Title -->
-    <div style="margin-top: 120px;"><h1 style="font-size: 36px; text-align: center; pointer-events: none;">Gallery</h1></div>
+    <main class="gallery-main">
+        <section class="gallery-hero">
+            <div class="gallery-kicker">Kellan Jiang | Gallery</div>
+            <h1 class="gallery-title">Gallery</h1>
+            <p class="gallery-subtitle">
+                A casual visual archive spanning travel, cycling, food, and a rotating featured selection.
+            </p>
+        </section>
 
-    
-    <div style="text-align: center;">
-        <h3>Featured</h3>
-    </div>
-    <div id="featured" class="photo-container">
-        <!-- Featured photos will be dynamically added here -->
-    </div>
+        <section class="gallery-section">
+            <div class="gallery-section-header">
+                <h2>Featured</h2>
+            </div>
+            <div id="featured" class="photo-container">
+                <!-- Featured photos will be dynamically added here -->
+            </div>
+        </section>
 
-    <div style="text-align: center;">
-        <h3>Cycling</h3>
-    </div>
-    <div id="cycling" class="photo-container">
-        <!-- Cycling photos will be dynamically added here -->
-    </div>
+        <section class="gallery-section">
+            <div class="gallery-section-header">
+                <h2>Cycling</h2>
+            </div>
+            <div id="cycling" class="photo-container">
+                <!-- Cycling photos will be dynamically added here -->
+            </div>
+        </section>
 
-    <div style="text-align: center;">
-        <h3>Travel</h3>
-    </div>
-    <div id="travel" class="photo-container">
-        <!-- Travel photos will be dynamically added here -->
-    </div>
+        <section class="gallery-section">
+            <div class="gallery-section-header">
+                <h2>Travel</h2>
+            </div>
+            <div id="travel" class="photo-container">
+                <!-- Travel photos will be dynamically added here -->
+            </div>
+        </section>
 
-    <div style="text-align: center;">
-        <h3>Food</h3>
-    </div>
-    <div id="food" class="photo-container">
-        <!-- Food photos will be dynamically added here -->
-    </div>
+        <section class="gallery-section">
+            <div class="gallery-section-header">
+                <h2>Food</h2>
+            </div>
+            <div id="food" class="photo-container">
+                <!-- Food photos will be dynamically added here -->
+            </div>
+        </section>
+    </main>
 
     <div id="popup" class="popup" onclick="closePopup()">
         <div class="popup-content">
@@ -68,7 +88,7 @@
     </footer>
 
     <a href="#" class="back-to-top">
-        <img src="/resources/buttons/back_to_top_button.png" alt="Back to Top" style="width: 20px; height: 20px; padding: 10px">
+        <img src="/resources/buttons/back_to_top_button.png" alt="Back to Top">
     </a>
 </body>
 </html>

@@ -27,8 +27,8 @@ async function main() {
 
         // Sort the projects based on the year in descending order
         projects = Array.from(projects).sort(function (a, b) {
-            var yearA = parseInt(a.querySelector(".arrow-pointer").textContent);
-            var yearB = parseInt(b.querySelector(".arrow-pointer").textContent);
+            var yearA = parseInt(a.querySelector(".project-year").textContent);
+            var yearB = parseInt(b.querySelector(".project-year").textContent);
             return yearB - yearA;
         });
 

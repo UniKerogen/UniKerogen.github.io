@@ -15,11 +15,11 @@
     transition: background-color 0.3s;
     text-decoration: none;
     pointer-events: all;
+}
 
-    &:hover {
-        background-color: #004687;
-        color: #ffffff
-    }
+.pill-button:hover {
+    background-color: #004687;
+    color: #ffffff;
 }
 
 .pill-button-container {
@@ -39,19 +39,18 @@
 
 .more_detail-item-container {
     position: relative;
-    display: inline-block;
-    background-color: #0076CE;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--accent);
     border-radius: 20px;
-    padding-left: 3px;
-    padding-right: 3px;
-    padding-top: 0px;
-    padding-bottom: 1px;
+    padding: 4px 12px !important;
     transition: color 0.3s;
     text-decoration: none;
 }
 
 .more_detail-item-container:hover {
-    background-color: #318CE7;
+    background-color: var(--accent-strong);
 }
 
 .more_detail {
@@ -60,10 +59,7 @@
     border: 1px solid transparent; /* Initially, transparent border */
     border-radius: 20px;
     transition: border 0.3s;
-    padding-left: 30px; /* Adjust padding to accommodate the image */
-    padding-right: 8px;
-    padding-top: 3px;
-    padding-bottom: 3px;
+    padding: 0;
     position: relative; /* Adjust positioning of the text */
     z-index: 1; /* Ensure the text is above the image */
     font-size: 16px;
@@ -72,13 +68,13 @@
 }
 
 .more_detail-image {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    width: 20px;
-    height: auto;
-    padding-left: 10px;
+    position: static;
+    transform: none;
+    width: 16px;
+    height: 16px;
+    flex: 0 0 16px;
+    object-fit: contain;
+    padding-left: 0;
     z-index: 0; /* Ensure the image is behind the text */
 }
 
@@ -93,18 +89,20 @@
 
 .download-item-container {
     position: relative;
-    display: inline-block;
-    background-color: rgb(65, 105, 225, 0.8);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: rgba(217, 119, 6, 0.18);
+    border: 1px solid transparent;
     border-radius: 20px;
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding: 6px 12px !important;
     transition: color 0.3s;
+    text-decoration: none;
 }
 
 .download-item-container:hover {
-    background-color: #324AB2;
+    background-color: var(--accent-soft);
+    border-color: rgba(245, 158, 11, 0.45);
 }
 
 .download {
@@ -113,10 +111,7 @@
     border: 1px solid transparent;
     border-radius: 20px;
     transition: border 0.3s;
-    padding-left: 23px;
-    padding-right: 8px;
-    padding-top: 2px;
-    padding-bottom: 2px;
+    padding: 0;
     position: relative;
     z-index: 1;
     font-size: 13px;
@@ -125,13 +120,15 @@
 }
 
 .download-image {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    width: 15px;
-    height: auto;
-    padding-left: 10px;
+    position: static;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 14px !important;
+    height: 14px;
+    flex: 0 0 14px;
+    object-fit: contain;
+    padding-left: 0;
     z-index: 0; /* Ensure the image is behind the text */
 }
 
@@ -153,10 +150,10 @@
     transition: color 0.3s;
     border: 1px solid #333333;
     cursor: pointer;
+}
 
-    &:hover {
-        border: 1px solid #eeeeee;
-    }
+.display-button-item-container:hover {
+    border: 1px solid #eeeeee;
 }
 
 .display-button-item-container.disabled {
@@ -199,10 +196,10 @@
     border: 1px solid #333333;
     cursor: pointer;
     text-decoration: none;
+}
 
-    &:hover {
-        border: 1px solid #eeeeee;
-    }
+.square-button-item-container:hover {
+    border: 1px solid #eeeeee;
 }
 .square-button {
     text-decoration: underline;
@@ -232,18 +229,30 @@
     transition: border 0.3s ease-in-out;
     pointer-events: all;
     border: 1px solid transparent;
-
-    &:hover {
-        border: 1px solid #318CE7;
-    }
 }
 
 .image-text-container img {
-    width: 20px; /* Set the desired width */
-    height: auto; /* Maintain aspect ratio */
+    width: 18px;
+    height: 18px;
+    flex: 0 0 18px;
+    object-fit: contain;
+    display: block;
     margin-right: 10px; /* Adjust the spacing between image and text */
 }
 
 .image-text-container p {
     margin: 0; /* Remove default margin */
+}
+
+/* Phase 1 foundation overrides */
+
+.pill-button:hover {
+    background-color: var(--accent);
+    color: var(--text-primary);
+}
+
+.display-button-item-container:hover,
+.square-button-item-container:hover,
+.image-text-container:hover {
+    border-color: var(--accent);
 }

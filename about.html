@@ -3,105 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | Kuang's Place</title>
-    <link rel="stylesheet" href="/styles.css">
+    <title>About | Kellan Jiang | Data Engineer</title>
+    <meta name="description" content="Professional experience, selected projects, education, and technical background for Kellan Jiang, with a focus on data engineering, backend services, and platform work.">
+    <link rel="canonical" href="https://unikerogen.github.io/about.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="About | Kellan Jiang | Data Engineer">
+    <meta property="og:description" content="Experience timeline, selected work, education, and technical background across data engineering, backend systems, and platform-focused development.">
+    <meta property="og:url" content="https://unikerogen.github.io/about.html">
+    <meta property="og:image" content="https://unikerogen.github.io/resources/personal_showcase.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About | Kellan Jiang | Data Engineer">
+    <meta name="twitter:description" content="Experience timeline, selected work, education, and technical background across data engineering, backend systems, and platform-focused development.">
+    <meta name="twitter:image" content="https://unikerogen.github.io/resources/personal_showcase.png">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/components.css">
     <link rel="stylesheet" href="/css/about_styles.css">
     <link rel="stylesheet" href="/css/button.css">
     <link rel="stylesheet" href="/css/label.css">
-    <style>
-        @media screen and (max-width: 650px) {
-            body {
-                overflow-x: auto;
-            }
-        }
-    </style>
     <script src="/script.js" defer></script>
     <script src="/js/experience_display.js" defer></script>
 </head>
 
-<body style="max-width: 800px; min-width: 650px;">
+<body class="page-shell">
     <!-- Header Section -->
     <header id="globalHeader">
         <!-- Content from global_header.html will be loaded here -->
     </header>
 
-    <!-- Experience Title -->
+    <main class="about-main">
+        <section class="about-hero">
+            <div class="about-hero-copy">
+                <div class="about-kicker">Kellan Jiang | About</div>
+                <h1 class="about-title">About</h1>
+                <p class="about-subtitle">
+                    This page brings together my professional experience, selected projects, education, and technical background — with a focus on systems I’ve built and the engineering priorities behind them.
+                </p>
+            </div>
+                <div class="about-actions">
+                <div class="download-container">
+                    <a href="#contactInformation" class="download-item-container">
+                        <img src="resources/buttons/contact_button.png" alt="Contact Icon" class="download-image">
+                        <div class="download">Jump To Contact</div>
+                    </a>
+                </div>
+                <div class="download-container">
+                    <a href="/resume.html" class="download-item-container">
+                        <img src="resources/buttons/file_icon_alt.png" alt="Download Button" class="download-image">
+                        <div class="download">Download Resume</div>
+                    </a>
+                </div>
+            </div>
+        </section>
 
-    <div style="margin-top: 120px;"><h1 style="font-size: 36px; text-align: center; pointer-events: none;">Experiences</h1></div>
+        <section class="about-controls-section">
+            <div class="about-controls-card">
+                <div class="about-controls-header">
+                    <h2>Experience Timeline</h2>
+                    <p>Filter the timeline by category to focus on work history, projects, education, or activities.</p>
+                </div>
 
-    <!-- Action Buttons -->
+                <div class="about-filter-bar">
+                    <span class="about-filter-label">Filter</span>
+                    <div class="display-button-container about-filter-buttons">
+                        <div id="overall-button" class="display-button-item-container" onclick="changeExperience('all')">
+                            <div class="display-button">Overall</div>
+                        </div>
+                        <div id="activity-button" class="display-button-item-container" onclick="changeExperience('activity')">
+                            <div class="display-button">Activities</div>
+                        </div>
+                        <div id="education-button" class="display-button-item-container" onclick="changeExperience('education')">
+                            <div class="display-button">Education</div>
+                        </div>
+                        <div id="experience-button" class="display-button-item-container" onclick="changeExperience('work')">
+                            <div class="display-button">Experience</div>
+                        </div>
+                        <div id="projects-button" class="display-button-item-container" onclick="changeExperience('project')">
+                            <div class="display-button">Projects</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    <div style="margin-top: -5px; margin-bottom: 15px; text-align: center;">
-        <div class="download-container">
-            <a href="#contactInformation" class="download-item-container">
-                <img src="resources/buttons/contact_button.png" alt="Contact Icon" class="download-image" style="width: 15px;">
-                <div class="download">Jump To Contact</div>
-            </a>
-        </div>
-        <div class="download-container">
-            <a href="/resume.html" class="download-item-container" style="cursor: pointer;">
-                <img src="resources/buttons/file_icon_alt.png" alt="Download Button" class="download-image" style="width: 15px;">
-                <div class="download">Download Resume</div>
-            </a>
-        </div>
-    </div>
+            <div class="experience-container" id="experience">
+                <!-- The content will be dynamically loaded based on the button clicks -->
+            </div>
+        </section>
 
-    <!-- Buttons to trigger different JavaScript scripts -->
-    <div class="display-button-container" style="text-align: center; pointer-events: none;">
-        Filter:
-        <div id="overall-button" class="display-button-item-container" onclick="changeExperience('all')">
-            <div class="display-button">Overall</div>
-        </div>
-        <div id="activity-button" class="display-button-item-container" onclick="changeExperience('activity')">
-            <div class="display-button">Activities</div>
-        </div>
-        <div id="education-button" class="display-button-item-container" onclick="changeExperience('education')">
-            <div class="display-button">Education</div>
-        </div>
-        <div id="experience-button" class="display-button-item-container" onclick="changeExperience('work')">
-            <div class="display-button">Experience</div>
-        </div>
-        <div id="projects-button" class="display-button-item-container" onclick="changeExperience('project')">
-            <div class="display-button">Projects</div>
-        </div>
-    </div>
+        <section class="about-contact-section" id="contactInformation">
+            <div class="contact-panel-about">
+                <div class="contact-panel-copy">
+                    <div class="about-kicker">Connect</div>
+                    <h2>Reach out anytime.</h2>
+                    <p>
+                        If you’d like to discuss data engineering, backend systems, platform work, or opportunities to collaborate, feel free to get in touch.
+                    </p>
+                </div>
 
-    <!-- Experience Section -->
-
-    <div class="experience-container" id="experience">
-        <!-- The content will be dynamically loaded based on the button clicks -->
-    </div>
-
-    <div class="dot-dash-line" style="margin: 20px 0px; width: 100%"></div>
-
-     <!-- Contact Information -->
-    <div class="contact-container" id="contactInformation">
-        <div class="image-section">
-             <img src="resources/contact_image.png" alt="Contact Image">
-        </div>
-        <div class="content-section">
-            <a href="/resume.html" class="aligned-content">
-                <img src="/resources/buttons/file_icon.png" alt="Email Icon">
-                <p>Have a Look at My Resume</p>
-            </a>
-            <a href="mailto:kkjiang27@gmail.com" class="aligned-content">
-                <img src="/resources/buttons/email_icon.png" alt="Email Icon">
-                <p>Send Me an Email</p>
-            </a>
-            <a href="https://unikerogen.github.io/" class="aligned-content">
-                <img src="/resources/buttons/website_icon.png" alt="LinkedIn Icon">
-                <p>Explore My Website</p>
-            </a>
-            <a href="https://www.linkedin.com/in/kuang-jiang/" class="aligned-content">
-                    <img src="/resources/buttons/linkedin_icon.png" alt="LinkedIn Icon">
-                    <p>Connect with Me on LinkedIn</p>
-            </a>
-            <a href="https://github.com/UniKerogen" class="aligned-content">
-                <img src="/resources/buttons/github_icon.png" alt="LinkedIn Icon">
-                <p>Check Me out on Github</p>
-            </a>
-        </div>
-    </div>
+                <div class="content-section about-contact-links">
+                    <a href="/resume.html" class="aligned-content">
+                        <img src="/resources/buttons/file_icon.png" alt="Resume Icon">
+                        <p>View Resume</p>
+                    </a>
+                    <a href="mailto:kkjiang27@gmail.com" class="aligned-content">
+                        <img src="/resources/buttons/email_icon.png" alt="Email Icon">
+                        <p>Send Email</p>
+                    </a>
+                    <a href="https://unikerogen.github.io/" class="aligned-content">
+                        <img src="/resources/buttons/website_icon.png" alt="Website Icon">
+                        <p>Visit Website</p>
+                    </a>
+                    <a href="https://www.linkedin.com/in/kuang-jiang/" class="aligned-content">
+                        <img src="/resources/buttons/linkedin_icon.png" alt="LinkedIn Icon">
+                        <p>LinkedIn</p>
+                    </a>
+                    <a href="https://github.com/UniKerogen" class="aligned-content">
+                        <img src="/resources/buttons/github_icon.png" alt="GitHub Icon">
+                        <p>GitHub</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer Section -->
 
@@ -110,7 +133,7 @@
     </footer>
 
     <a href="#" class="back-to-top">
-        <img src="/resources/buttons/back_to_top_button.png" alt="Back to Top" style="width: 20px; height: 20px; padding: 10px">
+        <img src="/resources/buttons/back_to_top_button.png" alt="Back to Top">
     </a>
 </body>
 </html>

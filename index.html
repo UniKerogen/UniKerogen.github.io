@@ -3,284 +3,282 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Kuang's Place</title>
-    <link rel="stylesheet" href="/styles.css">
+    <title>Kellan Jiang | Data Engineer</title>
+    <meta name="description" content="Kellan Jiang is a data engineer building reliable data workflows, backend services, and production-ready systems with Dagster, FastAPI, and modern infrastructure tooling.">
+    <link rel="canonical" href="https://unikerogen.github.io/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Kellan Jiang | Data Engineer">
+    <meta property="og:description" content="Data engineering, backend systems, and production-ready workflows built with reliability and maintainability in mind.">
+    <meta property="og:url" content="https://unikerogen.github.io/">
+    <meta property="og:image" content="https://unikerogen.github.io/resources/personal_showcase.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kellan Jiang | Data Engineer">
+    <meta name="twitter:description" content="Data engineering, backend systems, and production-ready workflows built with reliability and maintainability in mind.">
+    <meta name="twitter:image" content="https://unikerogen.github.io/resources/personal_showcase.png">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/components.css">
     <link rel="stylesheet" href="/css/button.css">
+    <link rel="stylesheet" href="/css/home.css">
     <link rel="stylesheet" href="/css/label.css">
-    <style>
-        @media screen and (max-width: 650px) {
-            body {
-                overflow-x: auto;
-            }
-        }
-    </style>
     <script src="/script.js" defer></script>
 </head>
 
-<body style="max-width: 800px; min-width: 650px;">
+<body class="page-shell">
     <!-- Header Section -->
     <header id="globalHeader">
         <!-- Content from global_header.html will be loaded here -->
     </header>
 
-    <!-- About Section-->
+    <main class="home-main">
+        <section class="home-section">
+            <div class="hero">
+                <div class="hero-copy">
+                    <div class="hero-kicker">Data Platform Engineer with Full-Stack Experience</div>
+                    <h1 class="hero-title">Kellan Jiang</h1>
+                    <p class="hero-subtitle">
+                        I design and build end-to-end data platforms with a focus on correctness, maintainability, observability, and operational reliability — from Dagster pipelines and FastAPI services to infrastructure and internal tooling.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="/about.html" class="hero-button">View Experience</a>
+                        <a href="/project.html" class="hero-button secondary">Explore Projects</a>
+                        <a href="/resume.html" class="hero-button secondary">Download Resume</a>
+                    </div>
+                </div>
 
-    <section>
-        <h1 style="padding-left: 36px; padding-top: 48px;">This is Me ...</h1>
-        <p style="padding-left: 48px; padding-right: 48px;">
-            A software engineer who specializes in designing and implementing innovative solutions, leveraging expertise in coding, machine-learning, problem-solving, and collaboration to create efficient and reliable software applications.
-        </p>
-    </section>
-
-    <!-- Proejct Section -->
-
-    <section>
-        <h1 style="padding-left: 36px;">Feature Projects</h1>
-
-        <!-- Project 1 -->
-
-        <div class="project" style="padding: 8px; display: flex; align-items: center;" id="project1">
-            <div class="project-description" style="flex: 2;">
-                <h2 style="padding-left: 48px; margin-bottom: -15px">Money Flow</h2>
-                <p style="padding-left: 48px;">
-                    <span class="tag">App</span>
-                    <span class="box">Private</span>
-                    <span class="pill">Swift</span>
-                    <span class="pill">Python</span>
-                    <span class="pill">SQL</span>
-                    <span class="leaf">Web Crawling</span>
-                    <span class="leaf">Data Management</span>
-                    <span class="leaf">LLM</span>
-                </p>
-                <p style="padding-left: 48px;">
-                    A personal finance app, originally built with Python and enhanced for macOS and iOS, combines intelligent budget planning with AI-powered analysis to streamline financial mangement.
-                </p>
-                <p style="padding-left: 48px;">
-                    <span class="more_detail-container">
-                        <a href="#" class="more_detail-item-container" style="pointer-events: none;">
-                            <img src="/resources/buttons/hourglass_icon.png" alt="More Detail Icon" class="more_detail-image" style="width: 20px; height: 20px">
-                            <span class="more_detail">Coming Soon...</span>
-                        </a>
-                    </span>
-                </p>
+                <aside class="hero-panel">
+                    <div>
+                        <div class="hero-panel-label">Current focus</div>
+                        <h2>Building modern data and platform workflows.</h2>
+                        <p>
+                            Recent work spans Dagster-based workflows, FastAPI backend services, e-commerce admin tooling, and infra support with Docker, RDS, and Terraform.
+                        </p>
+                    </div>
+                    <div class="hero-panel-list">
+                        <div class="hero-panel-item">
+                            <strong>Dagster + data workflows</strong>
+                            Orchestration, partitioning, reusable resources, and upsert-safe processing.
+                        </div>
+                        <div class="hero-panel-item">
+                            <strong>Backend integration</strong>
+                            API-driven delivery of operational and analytical data for internal platforms.
+                        </div>
+                        <div class="hero-panel-item">
+                            <strong>Operational quality</strong>
+                            Structured logging, alerting, retries, and validation for stable systems.
+                        </div>
+                    </div>
+                </aside>
             </div>
-            <div style="flex: 1; display: flex; align-items: center;">
-                <img src="/resources/project_image/money_flow.png" alt="Project 1" style="width: 200px; height: 200px; align-self: flex-end;">
-            </div>
-        </div>
+        </section>
 
-        <div class="dot-dash-line"></div>
-
-        <!-- Project 2 -->
-
-        <div class="project" style="padding: 8px; display: flex; align-items: center;" id="project2">
-            <div style="flex: 1; display: flex; align-items: center;">
-                <img src="/resources/project_image/dino_runner.png" alt="Project 2" style="padding-left: 48px;">
-            </div>
-            <div class="project-description" style="flex: 2;">
-                <h2 style="padding-right: 48px; margin-bottom: -15px;">Dino Runner</h2>
-                <p style="padding-right: 48px;">
-                    <span class="tag">AI</span>
-                    <span class="box">Private</span>
-                    <span class="pill">Python</span>
-                    <span class="pill">JavaScript</span>
-                    <span class="leaf">PyTorch</span>
-                    <span class="leaf">Tensorflow</span>
-                </p>
-                <p style="padding-right: 48px;">
-                    Embarked on a machine learning endeavor, this project meticulously captures gameplay data from Google's Dino Game and employs advanced training techniques to cultivate a bespoke agent proficient in mastering the game.
-                </p>
+        <section class="home-section">
+            <div class="section-heading">
+                <h2>Selected Work</h2>
                 <p>
-                    <span class="more_detail-container">
-                        <a href="/about.html#dinoRunner" class="more_detail-item-container">
-                            <img src="/resources/buttons/more_details_button.png" alt="More Detail Icon" class="more_detail-image" style="width: 20px; height: 20px">
-                            <span class="more_detail">Read More</span>
-                        </a>
-                    </span>
+                    A curated selection of work spanning internal platforms, product development, machine learning systems, and engineering-led technical design.
                 </p>
             </div>
-        </div>
 
-        <div class="dot-dash-line"></div>
+            <div class="featured-grid">
+                <article class="featured-card">
+                    <div class="featured-card-body">
+                        <div class="featured-card-header">
+                            <div class="featured-card-title-group">
+                                <h3>GalaHub</h3>
+                            </div>
+                            <a href="/about.html#galaHub" class="featured-link-button" aria-label="View GalaHub details">
+                                ↗
+                            </a>
+                        </div>
+                        <div class="featured-card-meta">
+                            <span class="tag">Platform</span>
+                            <span class="box">Internal</span>
+                        </div>
+                        <div class="tag-row">
+                            <span class="pill">Python</span>
+                            <span class="pill">React</span>
+                            <span class="pill">FastAPI</span>
+                            <span class="leaf">Data Pipelines</span>
+                            <span class="leaf">Observability</span>
+                        </div>
+                        <p>
+                            Internal e-commerce admin platform built around FastAPI services, reporting workflows, and pipeline-integrated operational data.
+                        </p>
+                    </div>
+                </article>
 
-        <!-- Project 3 -->
+                <article class="featured-card">
+                    <div class="featured-card-body">
+                        <div class="featured-card-header">
+                            <div class="featured-card-title-group">
+                                <h3>Money Flow</h3>
+                            </div>
+                            <a href="/about.html#moneyflow" class="featured-link-button" aria-label="View Money Flow details">
+                                ↗
+                            </a>
+                        </div>
+                        <div class="featured-card-meta">
+                            <span class="tag">App</span>
+                            <span class="box">Private</span>
+                        </div>
+                        <div class="tag-row">
+                            <span class="pill">Swift</span>
+                            <span class="pill">Python</span>
+                            <span class="pill">SQL</span>
+                            <span class="pill">CoreData</span>
+                            <span class="leaf">Data Management</span>
+                            <span class="leaf">LLM</span>
+                        </div>
+                        <p>
+                            Personal finance application combining structured data workflows, budgeting logic, and product-oriented app design.
+                        </p>
+                    </div>
+                </article>
 
-        <div class="project" style="padding: 8px; display: flex; align-items: center;" id="project3">
-            <div class="project-description" style="flex: 2;">
-                <h2 style="padding-left: 48px; margin-bottom: -15px;">ShroomBot</h2>
-                <p style="padding-left: 48px;">
-                    <span class="tag">AI</span>
-                    <span class="box">Public</span>
-                    <span class="pill">Python</span>
-                    <span class="pill">C/C++</span>
-                    <span class="leaf">AutoCAD</span>
-                    <span class="leaf">Solidworks</span>
-                    <span class="leaf">Tensorflow</span>
-                </p>
-                <p style="padding-left: 48px;">
-                    An innovative machine learning endeavor featuring a series of custom-built robots designed for 24/7 mushroom picking, driven by network, powered by reinforcement learning algorithms.
-                </p>
-                <p style="padding-left: 48px;">
-                    <span class="more_detail-container">
-                        <a href="/blog/shroomBot.html" class="more_detail-item-container">
-                            <img src="/resources/buttons/more_details_button.png" alt="More Detail Icon" class="more_detail-image" style="width: 20px; height: 20px">
-                            <span class="more_detail">Read More</span>
-                        </a>
-                    </span>
-                </p>
+                <article class="featured-card">
+                    <div class="featured-card-body">
+                        <div class="featured-card-header">
+                            <div class="featured-card-title-group">
+                                <h3>ShroomBot</h3>
+                            </div>
+                            <a href="/blog/shroomBot.html" class="featured-link-button" aria-label="View ShroomBot details">
+                                ↗
+                            </a>
+                        </div>
+                        <div class="featured-card-meta">
+                            <span class="tag">Project</span>
+                            <span class="box">Public</span>
+                        </div>
+                        <div class="tag-row">
+                            <span class="pill">Python</span>
+                            <span class="pill">C/C++</span>
+                            <span class="leaf">TensorFlow</span>
+                            <span class="leaf">Automation</span>
+                        </div>
+                        <p>
+                            Machine learning and robotics project focused on autonomous mushroom-picking workflows, onboard intelligence, and coordinated system behavior.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="featured-card">
+                    <div class="featured-card-body">
+                        <div class="featured-card-header">
+                            <div class="featured-card-title-group">
+                                <h3>Kellan's Place</h3>
+                            </div>
+                            <a href="/blog/kellans-place.html" class="featured-link-button" aria-label="View Kellan's Place details">
+                                ↗
+                            </a>
+                        </div>
+                        <div class="featured-card-meta">
+                            <span class="tag">Web</span>
+                            <span class="box">Public</span>
+                        </div>
+                        <div class="tag-row">
+                            <span class="pill">HTML</span>
+                            <span class="pill">CSS</span>
+                            <span class="pill">JavaScript</span>
+                            <span class="leaf">UI Design</span>
+                            <span class="leaf">Web Development</span>
+                        </div>
+                        <p>
+                            Personal portfolio platform built to showcase projects, experience, writing, and photography through a maintainable static architecture and custom-crafted interface.
+                        </p>
+                    </div>
+                </article>
             </div>
-            <div style="flex: 1; display: flex; align-items: center;">
-                <img src="/resources/project_image/shroombot.png" alt="Project 3" style="padding-right: 48px; align-self: right;">
-            </div>
-        </div>
+        </section>
 
-        <div class="dot-dash-line"></div>
-
-        <!-- Project 4 -->
-
-        <div class="project" style="padding: 8px; display: flex; align-items: center;" id="project4">
-            <div style="flex: 1; display: flex; align-items: center;">
-                <img src="/resources/project_image/gpt_desktop.png" alt="Project 4" style="padding-left: 48px;">
-            </div>
-            <div class="project-description" style="flex: 2;">
-                <h2 style="padding-right: 48px; margin-bottom: -15px">GPT Desktop</h2>
-                <p style="padding-right: 48px;">
-                    <span class="tag">App</span>
-                    <span class="box">Public</span>
-                    <span class="pill">Swift</span>
-                    <span class="leaf">UI Design</span>
-                </p>
-                <p style="padding-right: 48px;">
-                    A macOS application that seamlessly integrates a curated collection of GPTs onto the desktop, enhanced with carefully selected features.
-                </p>
-                <p style="padding-right: 48px;">
-                    <span class="more_detail-container">
-                        <a href="/blog/gptDesktop.html" class="more_detail-item-container">
-                            <img src="/resources/buttons/more_details_button.png" alt="More Detail Icon" class="more_detail-image" style="width: 20px; height: 20px">
-                            <span class="more_detail">Read More</span>
-                        </a>
-                    </span>
-                </p>
-            </div>
-        </div>
-
-        <div class="dot-dash-line"></div>
-
-        <!-- Project 5 -->
-
-        <div class="project" style="padding: 8px; display: flex; align-items: center;" id="project5">
-            <div class="project-description" style="flex: 2;">
-                <h2 style="padding-left: 48px; margin-bottom: -15px;">Kuang's Place</h2>
-                <p style="padding-left: 48px;">
-                    <span class="tag">Web</span>
-                    <span class="box">Public</span>
-                    <span class="pill">HTML</span>
-                    <span class="pill">CSS</span>
-                    <span class="pill">SQL</span>
-                    <span class="pill">JavaScript</span>
-                </p>
-                <p style="padding-left: 48px;" id="project5ShortDescription">
-                    A webpage showcases my diverse range of skills and projects, combining creativity and technical expertise to deliver visually appealing and functional solutions.
-                </p>
-                <p style="padding-left: 48px;">
-                    <span class="more_detail-container">
-                        <a href="/blog/kuangsPlace.html" class="more_detail-item-container">
-                            <img src="/resources/buttons/more_details_button.png" alt="More Detail Icon" class="more_detail-image" style="width: 20px; height: 20px">
-                            <span class="more_detail">Read More</span>
-                        </a>
-                    </span>
-                </p>
-            </div>
-            <div style="flex: 1; display: flex; align-items: center;">
-                <img src="/resources/project_image/kuang_s_place.png" alt="Project 5" style="padding-right: 48px; align-self: right;">
-            </div>
-        </div>
-
-        <div class="dot-dash-line" style="margin-bottom: 10px"></div>
-
-        <!-- More Project -->
-        <div class="project" style="padding: 8px; display: flex; margin-bottom: -35px" id="moreProject">
-            <div style="width: 100%;">
-                <a href="/project.html" class="image-text-container" style="display: flex; justify-content: center; align-items: center;">
-                    <img src="/resources/buttons/project_icon.png" alt="Email Icon">
-                    <p>Explore More Projects</p>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <div class="project" style="padding: 8px; display: flex" id="personalShowcase">
-            <div class="project-description" style="flex-direction: column; padding-left: 48px">
+        <section class="home-section">
+            <div class="section-heading">
+                <h2>What I build</h2>
                 <p>
-                    I eagerly anticipate the opportunity to meet you!<br>
-                    Please don't hesitate to contact me anytime; your communication is always welcome.
-                </p>
-                <p style="font-size: 14px; margin-bottom: 0px;">Programming Skills:</p>
-                <p style="margin: 0px;">
-                    <span class="pill">Python</span>
-                    <span class="pill">C/C++</span>
-                    <span class="pill">Java</span>
-                    <span class="pill">JavaScript</span>
-                    <span class="pill">HTML</span>
-                    <span class="pill">CSS</span>
-                    <span class="pill">SQL</span>
-                    <span class="pill">Swift</span>
-                    <span class="pill">Verilog</span>
-                    <span class="pill">Assembly</span>
-                    <span class="pill">MATLAB/Simulink</span>
-                    <span class="pill">Docker</span>
-                    <span class="pill">Git</span>
-                    <span class="pill">Shell</span>
-                </p>
-                <p style="font-size: 14px; margin-bottom: 0px;">AI/Robotics Skills:</p>
-                <p style="margin: 0px;">
-                    <span class="leaf">AutoCAD</span>
-                    <span class="leaf">Solidworks</span>
-                    <span class="leaf">SLAM</span>
-                    <span class="leaf">OpenCV</span>
-                    <span class="leaf">CUDA</span>
-                    <span class="leaf">Tensorflow</span>
-                    <span class="leaf">PyTorch</span>
-                    <span class="leaf">Robot Operating System(ROS)</span>
-                    <span class="leaf">Threading</span>
-                    <span class="leaf">Multiprocessing</span>
-                    <span class="leaf">Computer Vision</span>
-                    <span class="leaf">Sensor Integration</span>
-                    <span class="leaf">Autonomous Systems</span>
+                    I work across data, backend, and platform concerns — with an emphasis on reliable delivery, maintainable systems, and practical product value.
                 </p>
             </div>
-        </div>
-        <div class="project" style="padding: 8px; display: flex" id="mainPageContact">
-            <div style="flex: 1; display: flex; align-items: center;">
-                <img src="/resources/personal_showcase.png" alt="contactImage" style="padding-left: 48px;">
+
+            <div class="info-grid">
+                <div class="info-panel">
+                    <h3>Core Capabilities</h3>
+                    <div class="tag-cloud">
+                        <span class="pill">Python</span>
+                        <span class="pill">SQL</span>
+                        <span class="pill">Dagster</span>
+                        <span class="pill">FastAPI</span>
+                        <span class="pill">Docker</span>
+                        <span class="pill">Terraform</span>
+                        <span class="pill">Kubernetes</span>
+                        <span class="pill">React</span>
+                        <span class="pill">JavaScript</span>
+                        <span class="pill">TypeScript</span>
+                        <span class="pill">HTML</span>
+                        <span class="pill">CSS</span>
+                        <span class="pill">Amazon RDS</span>
+                        <span class="pill">OpenCV</span>
+                        <span class="pill">C/C++</span>
+                        <span class="pill">Swift</span>
+                    </div>
+                </div>
+
+                <div class="info-panel">
+                    <h3>Engineering Priorities</h3>
+                    <div class="tag-cloud">
+                        <span class="leaf">Data Pipelines</span>
+                        <span class="leaf">Backend Services</span>
+                        <span class="leaf">Data Modeling</span>
+                        <span class="leaf">API Integration</span>
+                        <span class="leaf">Observability</span>
+                        <span class="leaf">Validation</span>
+                        <span class="leaf">Retry Safety</span>
+                        <span class="leaf">Admin Platforms</span>
+                        <span class="leaf">Workflow Automation</span>
+                        <span class="leaf">Computer Vision</span>
+                        <span class="leaf">Sensor Integration</span>
+                        <span class="leaf">Operational Reliability</span>
+                    </div>
+                </div>
             </div>
-            <div class="project-description" style="flex: 2; flex-direction: column;">
-                <div style="width: 100%; padding-left: 30px">
-                    <a href="about.html" class="image-text-container">
-                        <img src="/resources/buttons/about_me_icon.png" alt="Email Icon">
-                        <p>More About Me</p>
+        </section>
+
+        <section class="home-section">
+            <div class="contact-panel">
+                <div class="contact-copy">
+                    <h2>Open to connecting</h2>
+                    <p>
+                        If you are hiring for data engineering, backend, or platform-focused roles, I’d be happy to connect and share more about my work.
+                    </p>
+                </div>
+                <div class="contact-links">
+                    <a href="/about.html" class="image-text-container">
+                        <img src="/resources/buttons/about_me_icon.png" alt="About">
+                        <p>About</p>
                     </a>
                     <a href="/resume.html" class="image-text-container">
-                        <img src="/resources/buttons/file_icon.png" alt="Email Icon">
-                        <p>Have a look at My Resume</p>
+                        <img src="/resources/buttons/file_icon.png" alt="Resume">
+                        <p>Resume</p>
                     </a>
                     <a href="mailto:kkjiang27@gmail.com" class="image-text-container">
-                        <img src="/resources/buttons/email_icon.png" alt="Email Icon">
-                        <p>Send Me an Email</p>
+                        <img src="/resources/buttons/email_icon.png" alt="Email">
+                        <p>Email</p>
                     </a>
                     <a href="https://www.linkedin.com/in/kuang-jiang/" class="image-text-container">
-                        <img src="/resources/buttons/linkedin_icon.png" alt="Email Icon">
-                        <p>Connect with Me on LinkedIn</p>
+                        <img src="/resources/buttons/linkedin_icon.png" alt="LinkedIn">
+                        <p>LinkedIn</p>
                     </a>
                     <a href="https://github.com/UniKerogen" class="image-text-container">
-                        <img src="/resources/buttons/github_icon.png" alt="Email Icon">
-                        <p>Check Me out on Github</p>
+                        <img src="/resources/buttons/github_icon.png" alt="Github">
+                        <p>GitHub</p>
+                    </a>
+                    <a href="/project.html" class="image-text-container">
+                        <img src="/resources/buttons/project_icon.png" alt="Projects">
+                        <p>Projects</p>
                     </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer Section -->
 
@@ -289,7 +287,7 @@
     </footer>
 
     <a href="#" class="back-to-top">
-        <img src="/resources/buttons/back_to_top_button.png" alt="Back to Top" style="width: 20px; height: 20px; padding: 10px">
+        <img src="/resources/buttons/back_to_top_button.png" alt="Back to Top">
     </a>
 </body>
 </html>

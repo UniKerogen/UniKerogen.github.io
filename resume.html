@@ -3,78 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume Download | Kuang's Place</title>
-    <link rel="stylesheet" href="/styles.css">
+    <title>Resume | Kellan Jiang | Data Engineer</title>
+    <meta name="description" content="Open focused HTML resume variants for Kellan Jiang tailored to data engineering and full-stack roles.">
+    <link rel="canonical" href="https://unikerogen.github.io/resume.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Resume | Kellan Jiang | Data Engineer">
+    <meta property="og:description" content="Focused HTML resume variants tailored to data engineering and full-stack roles.">
+    <meta property="og:url" content="https://unikerogen.github.io/resume.html">
+    <meta property="og:image" content="https://unikerogen.github.io/resources/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Resume | Kellan Jiang | Data Engineer">
+    <meta name="twitter:description" content="Focused HTML resume variants tailored to data engineering and full-stack roles.">
+    <meta name="twitter:image" content="https://unikerogen.github.io/resources/logo.png">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/components.css">
     <link rel="stylesheet" href="/css/resume.css">
-    <link rel="stylesheet" href="css/button.css">
-    <style>
-        @media screen and (max-width: 600px) {
-            body {
-                overflow-x: auto;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="/css/button.css">
     <script src="/script.js" defer></script>
     <script src="/js/resume.js" defer></script>
 </head>
 
-<body style="min-width: 600px; max-width: 800px;">
+<body class="page-shell">
     <!-- Header Section -->
     <header id="globalHeader">
         <!-- Content from global_header.html will be loaded here -->
     </header>
 
-    <!-- Title -->
-    <div style="margin-top: 120px;"><h1 style="font-size: 36px; text-align: center; pointer-events: none;">Resumes</h1></div>
+    <main class="resume-main">
+        <section class="resume-hero">
+            <div class="resume-kicker">Kellan Jiang | Resume</div>
+            <h1 class="resume-title">Resume</h1>
+            <p class="resume-subtitle">
+                Open focused HTML resume variants tailored to data engineering and full-stack roles, then print or save them as PDF.
+            </p>
+        </section>
 
-    <section>
-        <div style="text-align: center;">
-            <div class="display-button-container" style="text-align: center; pointer-events: none;">
-                Focus:
-                <div id="software-button" class="display-button-item-container" onclick="changeResume('software')">
-                    <div class="display-button">Software</div>
+        <section class="resume-selector-section">
+            <div class="resume-selector-card">
+                <div class="resume-selector-header">
+                    <h2>Resume Focus</h2>
+                    <p>Select a specialization to preview the emphasis and open the corresponding print-friendly resume.</p>
                 </div>
-                <div id="ml-button" class="display-button-item-container" onclick="changeResume('ml')">
-                    <div class="display-button">ML/AI</div>
-                </div>
-                <div id="data-button" class="display-button-item-container" onclick="changeResume('data')">
-                    <div class="display-button">Data</div>
-                </div>
-                <div id="full-stack-button" class="display-button-item-container" onclick="changeResume('full-stack')">
-                    <div class="display-button">Full Stack</div>
-                </div>
-                <!-- <div id="ba-button" class="display-button-item-container" onclick="changeResume('ba')">
-                    <div class="display-button">BA</div>
-                </div> -->
-            </div>
-        </div>
 
-        <div class="resume-container">
-            <div class="preview-column">
-                <img src="/resources/buttons/hourglass_icon.png" style="filter: brightness(80%); width: 100%">
-            </div>
-            <div class="text-column">
-                <h2>Preparing Resume...</h2>
-                <div class="dot-dash-line" style="margin-top: 2px; margin-bottom: -2px"></div>
-                <p>Resume will be prepared shortly.</p>
-                <div class="download-container">
-                    <a href="" class="download-item-container" style="cursor: none;">
-                        <img src="/resources/buttons/hourglass_icon.png" alt="Download Button" class="download-image" style="width: 15px;">
-                        <div class="download">Waiting...</div>
-                    </a>
+                <div class="resume-filter-bar">
+                    <span class="resume-filter-label">Focus</span>
+                    <div class="display-button-container resume-filter-buttons">
+                        <div id="data-button" class="display-button-item-container" onclick="changeResume('data')">
+                            <div class="display-button">Data</div>
+                        </div>
+                        <div id="full-stack-button" class="display-button-item-container" onclick="changeResume('full-stack')">
+                            <div class="display-button">Full Stack</div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+
+            <div class="resume-container">
+                <div class="preview-column">
+                    <img src="/resources/buttons/hourglass_icon.png" alt="Resume preview icon" decoding="async" class="resume-preview-image is-placeholder">
+                </div>
+                <div class="text-column">
+                    <h2>Preparing Resume...</h2>
+                    <div class="dot-dash-line resume-divider"></div>
+                    <p>Choose a focus to open a print-friendly HTML resume.</p>
+                    <div class="download-container">
+                        <a href="" class="download-item-container resume-download-link is-disabled">
+                            <img src="/resources/buttons/hourglass_icon.png" alt="Download Button" class="download-image">
+                            <div class="download">Select a Focus</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer Section -->
 
-    <footer style="margin-top: 0px;">
+    <footer>
         <div class="legal_note" id="copyright"></div>
     </footer>
 
     <a href="#" class="back-to-top">
-        <img src="/resources/buttons/back_to_top_button.png" alt="Back to Top" style="width: 20px; height: 20px; padding: 10px">
+        <img src="/resources/buttons/back_to_top_button.png" alt="Back to Top">
     </a>
 </body>
 </html>

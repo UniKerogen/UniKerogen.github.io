@@ -3,45 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog | Kuang's Place</title>
-    <link rel="stylesheet" href="/styles.css">
+    <title>Blog | Kellan Jiang | Data Engineer</title>
+    <meta name="description" content="Project write-ups, technical notes, travel posts, and longer-form reflections from Kellan Jiang.">
+    <link rel="canonical" href="https://unikerogen.github.io/blog.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Blog | Kellan Jiang | Data Engineer">
+    <meta property="og:description" content="Project write-ups, technical notes, travel posts, and longer-form reflections from Kellan Jiang.">
+    <meta property="og:url" content="https://unikerogen.github.io/blog.html">
+    <meta property="og:image" content="https://unikerogen.github.io/resources/blog_image/gptDesktop/gptDesktop.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Blog | Kellan Jiang | Data Engineer">
+    <meta name="twitter:description" content="Project write-ups, technical notes, travel posts, and longer-form reflections from Kellan Jiang.">
+    <meta name="twitter:image" content="https://unikerogen.github.io/resources/blog_image/gptDesktop/gptDesktop.png">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/components.css">
     <link rel="stylesheet" href="/css/blog_styles.css">
     <link rel="stylesheet" href="/css/button.css">
     <link rel="stylesheet" href="/css/label.css">
-    <style>
-        @media screen and (max-width: 400px) {
-            body {
-                overflow-x: auto;
-            }
-        }
-    </style>
     <script src="/script.js" defer></script>
     <script src="/js/blog_content.js" defer></script>
 </head>
 
-<body style="min-width: 400px; max-width: 800px;">
+<body class="page-shell">
     <!-- Header Section -->
     <header id="globalHeader">
         <!-- Content from global_header.html will be loaded here -->
     </header>
-    <div style="margin-top: 120px;"></div>
 
-    <!-- Main Section -->
-    <div style="margin-bottom: 20px;">
-        <h1 style="font-size: 36px; text-align: center; pointer-events: none;">Blogs</h1>
-    </div>
-    <div class="blog-container" id="blogContainer">
-        <!-- Content will be dynamically added here using JavaScript -->
-    </div>
+    <main class="blog-main">
+        <section class="blog-hero">
+            <div class="blog-kicker">Kellan Jiang | Blogs</div>
+            <h1 class="blog-title">Blogs</h1>
+            <p class="blog-subtitle">
+                A collection of project breakdowns, travel notes, and personal writing that adds context to the work shown across the rest of the site.
+            </p>
+        </section>
+
+        <section class="blog-list-section">
+            <div class="blog-group">
+                <div class="blog-list-header">
+                    <h2>Project &amp; Technical Writing</h2>
+                    <!-- <p>Build notes, project breakdowns, and engineering-focused posts that add context to the work shown across the site.</p> -->
+                </div>
+                <div class="blog-container" id="technicalBlogContainer"></div>
+            </div>
+
+            <div class="blog-group blog-group-secondary">
+                <div class="blog-list-header">
+                    <h2>Travel &amp; Personal Notes</h2>
+                    <!-- <p>Personal writing and travel posts that sit alongside the technical work without leading the site’s narrative.</p> -->
+                </div>
+                <div class="blog-container" id="personalBlogContainer"></div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer Section -->
 
-    <footer style="width: 100vw;">
+    <footer>
         <div class="legal_note" id="copyright"></div>
     </footer>
 
     <a href="#" class="back-to-top">
-        <img src="/resources/buttons/back_to_top_button.png" alt="Back to Top" style="width: 20px; height: 20px; padding: 10px">
+        <img src="/resources/buttons/back_to_top_button.png" alt="Back to Top">
     </a>
 </body>
 </html>

@@ -3,6 +3,117 @@
 /* Author: Kuang Jiang */
 /* Description: This file contains the styles for the about page. */
 
+.about-main {
+    padding-top: 92px;
+}
+
+.about-hero,
+.about-controls-section,
+.about-contact-section {
+    padding: 40px 0;
+}
+
+.about-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+    color: var(--accent-strong);
+    font-size: 0.88rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.about-kicker::before {
+    content: "";
+    width: 36px;
+    height: 1px;
+    background: rgba(245, 158, 11, 0.75);
+}
+
+.about-title {
+    max-width: 18ch;
+    margin: 0 0 16px;
+}
+
+.about-subtitle {
+    margin: 0;
+    max-width: none;
+    font-size: 1.05rem;
+}
+
+.about-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 22px;
+}
+
+.about-actions .download-item-container {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.about-actions .download {
+    padding-left: 0;
+}
+
+.about-actions .download-image {
+    position: static;
+    transform: none;
+    padding-left: 0;
+}
+
+.about-controls-card,
+.contact-panel-about {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    box-shadow: var(--shadow-soft);
+}
+
+.about-controls-card {
+    padding: 24px 24px 18px;
+    margin-bottom: 18px;
+}
+
+.about-controls-header h2 {
+    margin: 0 0 8px;
+}
+
+.about-controls-header p {
+    margin: 0;
+}
+
+.about-filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.about-filter-label {
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.about-filter-buttons {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.about-filter-buttons .display-button-item-container {
+    margin-left: 0;
+}
+
 .experience-container {
     padding: 20px;
     width: 95%;
@@ -49,20 +160,20 @@
 .experience-content {
     width: inherit;
     margin-left: 10px;
+}
 
-    &::after {
-        flex: 1;
-        content: '';
-        position: absolute;
-        top: 37px;
-        left: -9px;
-        transform: translateY(-50%);
-        width: 15px;
-        height: 15px;
-        background-color: #4B61D1;
-        border: transparent;
-        border-radius: 50%;
-    }
+.experience-content::after {
+    flex: 1;
+    content: '';
+    position: absolute;
+    top: 37px;
+    left: -9px;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    background-color: #4B61D1;
+    border: transparent;
+    border-radius: 50%;
 }
 
 .experience-content h1 {
@@ -128,28 +239,7 @@
 
 /* Contact Section */
 
-.contact-container {
-    display: flex;
-    width: 95%;
-    margin: 20px;
-    padding-bottom: 20px;
-}
-
-.image-section {
-    flex: 2;
-    padding: 10px;
-}
-
-.image-section img {
-    max-width: 250px;
-    min-width: 50px;
-    height: auto;
-    display: block;
-    float: right;
-}
-
 .content-section {
-    flex: 3;
     padding: 10px;
     box-sizing: border-box;
 }
@@ -168,10 +258,10 @@
     text-decoration: none;
     margin: 5px 2px;
     transition: border 0.3s ease-in-out;
+}
 
-    &:hover {
-        border: 1px solid #4B61D1;
-    }
+.aligned-content:hover {
+    border: 1px solid #4B61D1;
 }
 
 .aligned-content p {
@@ -179,13 +269,273 @@
 }
 
 .aligned-content img {
+    width: 18px;
+    height: 18px;
+    flex: 0 0 18px;
+    object-fit: contain;
+    display: block;
     margin-right: 10px;
 }
 
-/* Tag Conatiner */
+/* Tag Container */
 .tag-container {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     margin: 10px 0px;
+}
+
+.experience-content .download-item-container,
+.experience-content .more_detail-item-container {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.experience-content .download,
+.experience-content .more_detail {
+    padding-left: 0;
+}
+
+.experience-content .download-image,
+.experience-content .more_detail-image {
+    position: static;
+    transform: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+/* Phase 1 foundation overrides */
+
+.experience-container {
+    width: 100%;
+    margin: 0;
+    padding: 8px 0 0;
+}
+
+.year {
+    border-right: 2px solid rgba(245, 158, 11, 0.65);
+    padding-top: 18px;
+}
+
+.year-content {
+    color: var(--text-muted);
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+}
+
+.experience-content {
+    margin-left: 16px;
+    padding: 20px 0 14px;
+}
+
+.experience-content::after {
+    content: '';
+    position: absolute;
+    top: 46px;
+    left: -10px;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: var(--accent);
+    box-shadow: 0 0 0 6px rgba(217, 119, 6, 0.12);
+}
+
+.experience-content h1 {
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: var(--text-primary);
+    font-size: 1.3rem;
+    line-height: 1.3;
+}
+
+.experience-content h2,
+.experience-content h3,
+.experience-content p,
+.experience-content p2,
+.experience-content hl {
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.experience-content h2,
+.experience-content h3 {
+    color: var(--text-secondary);
+}
+
+.experience-content h2 {
+    margin-bottom: 8px;
+    font-size: 0.98rem;
+    font-style: normal;
+}
+
+.experience-content p,
+.experience-content p2 {
+    color: var(--text-secondary);
+    line-height: 1.65;
+    font-size: 0.98rem;
+}
+
+.experience-content hl {
+    color: var(--text-primary);
+}
+
+.contact-panel-about {
+    padding: 28px;
+}
+
+.contact-panel-copy {
+    margin-bottom: 10px;
+}
+
+.contact-panel-copy h2 {
+    margin: 0 0 10px;
+}
+
+.contact-panel-copy p {
+    margin: 0;
+}
+
+.content-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
+}
+
+.about-contact-links {
+    margin-top: 8px;
+}
+
+.aligned-content {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 48px;
+    padding: 12px 14px;
+    margin: 0;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.aligned-content:hover {
+    border: 1px solid var(--accent);
+    background: var(--accent-soft);
+}
+
+@media screen and (max-width: 780px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .about-subtitle {
+        max-width: 100%;
+    }
+
+    .year {
+        border-right: none;
+        border-bottom: 1px solid rgba(245, 158, 11, 0.35);
+        padding-bottom: 0;
+    }
+
+    .year-content {
+        text-align: left;
+        padding-top: 0;
+    }
+
+    .experience-content {
+        margin-left: 0;
+        padding-top: 14px;
+    }
+
+    .experience-content::after {
+        display: none;
+    }
+
+    .about-title {
+        max-width: 100%;
+    }
+
+    .about-controls-card,
+    .contact-panel-about {
+        padding: 22px;
+    }
+
+    .about-filter-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .content-section {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .about-hero,
+    .about-controls-section,
+    .about-contact-section {
+        padding: 32px 0;
+    }
+
+    .about-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .about-actions .download-container {
+        width: 100%;
+    }
+
+    .about-actions .download-item-container {
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .about-actions .download {
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .about-actions .download-image {
+        position: static;
+        transform: none;
+        padding-left: 0;
+    }
+
+    .about-controls-card,
+    .contact-panel-about {
+        padding: 18px;
+    }
+
+    .year,
+    .experience {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .experience-content h1 {
+        font-size: 1.16rem;
+    }
+
+    .experience-content p,
+    .experience-content p2 {
+        font-size: 0.94rem;
+    }
+
+    .content-section {
+        flex-direction: column;
+    }
+
+    .aligned-content {
+        width: 100%;
+        justify-content: flex-start;
+    }
 }

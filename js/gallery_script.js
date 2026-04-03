@@ -81,7 +81,7 @@ function shuffleArray(array) {
 }
 
 function createPhotoElement(photo) {
-    return `<div class="image-container"><img src="${photo.url}" alt="${photo.title}" class="photo" loading="lazy" onclick="showPopup('${photo.url}')"></div>`;
+    return `<div class="image-container"><img src="${photo.url}" alt="${photo.title}" class="photo" loading="lazy" decoding="async" fetchpriority="low" onclick="showPopup('${photo.url}')"></div>`;
 }
 
 function getRandomElements(array, count) {

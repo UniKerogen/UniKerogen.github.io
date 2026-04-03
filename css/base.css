@@ -1,0 +1,87 @@
+/* base.css */
+/* Shared design tokens, reset, and typography */
+
+:root {
+    --bg: #111111;
+    --bg-elevated: #171717;
+    --bg-surface: #1d1d1d;
+    --border: #2e2e2e;
+    --border-strong: #474747;
+    --text-primary: #f3efe8;
+    --text-secondary: #c7beb2;
+    --text-muted: #9e968d;
+    --accent: #d97706;
+    --accent-strong: #f59e0b;
+    --accent-soft: rgba(217, 119, 6, 0.18);
+    --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.35);
+    --radius-sm: 10px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: var(--bg);
+    color: var(--text-secondary);
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    user-select: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: var(--text-primary);
+}
+
+h1 {
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: clamp(1.4rem, 2vw, 2rem);
+    margin-bottom: 14px;
+}
+
+h3 {
+    font-size: clamp(1.1rem, 1.6vw, 1.4rem);
+    margin-bottom: 14px;
+}
+
+h4 {
+    color: var(--text-primary);
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+h5 {
+    color: var(--text-primary);
+    font-size: 12px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+a {
+    color: inherit;
+}
